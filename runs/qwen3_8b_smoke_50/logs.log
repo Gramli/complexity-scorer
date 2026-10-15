@@ -1,0 +1,987 @@
+root:680 [INFO] Command line invocation: 'src\train_smoke.py'
+tinker_cookbook.utils.ml_log:618 [INFO] Logging to: runs\qwen3_8b_smoke_50
+tinker.lib.public_interfaces.service_client:151 [INFO] ServiceClient initialized for session 377ac0e0-e6b9-5d4f-a6d6-919b4a00f472
+tinker.lib.public_interfaces.service_client:293 [INFO] TrainingClient initialized for model 377ac0e0-e6b9-5d4f-a6d6-919b4a00f472:train:0
+huggingface_hub.utils._http:993 [WARNING] Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+tinker_cookbook.supervised.train:390 [INFO] Training for 6 batches x 3 epochs = 18 steps
+tinker_cookbook.supervised.train:543 [INFO] Starting epoch 0
+tinker_cookbook.supervised.common:339 [INFO] Weight reduction: 'mean' (token-mean loss)
+tinker_cookbook.supervised.train:419 [INFO] [33m<|im_start|>system
+[0m[33mYou are a prompt complexity classifier.
+[0m[33m
+[0m[33mEstimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+[0m[33m
+[0m[33mComplexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+[0m[33m
+[0m[33mUse these scores:
+[0m[33m
+[0m[33m- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+[0m[33m- 0.25 — Easy: limited interpretation or a few straightforward steps.
+[0m[33m- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+[0m[33m- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+[0m[33m- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+[0m[33m
+[0m[33mImportant:
+[0m[33m
+[0m[33m- Do not use prompt length as the main indicator of complexity.
+[0m[33m- Technical terminology alone does not make a prompt difficult.
+[0m[33m- A long prompt can be trivial.
+[0m[33m- A short prompt can be very difficult.
+[0m[33m
+[0m[33mReturn JSON only:
+[0m[33m{"complexity": 0.50}
+[0m[33m
+[0m[33mDo not include explanations, Markdown, or additional properties.
+[0m[33m<|im_end|>
+[0m[33m<|im_start|>user
+[0m[33mBuild output: restore succeeded; compiler warnings: 7; tests passed: 142; tests failed: 0; publish skipped because the signing certificate expired. Return only the number of compiler warnings.<|im_end|>
+[0m[33m<|im_start|>assistant
+[0m[32m<think>
+[0m[32m
+[0m[32m</think>
+[0m[32m
+[0m[32m{"complexity":0.00}<|im_end|>[0m
+tinker_cookbook.supervised.train:419 [INFO] [33m<|im_start|>system
+[0m[33mYou are a prompt complexity classifier.
+[0m[33m
+[0m[33mEstimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+[0m[33m
+[0m[33mComplexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+[0m[33m
+[0m[33mUse these scores:
+[0m[33m
+[0m[33m- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+[0m[33m- 0.25 — Easy: limited interpretation or a few straightforward steps.
+[0m[33m- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+[0m[33m- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+[0m[33m- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+[0m[33m
+[0m[33mImportant:
+[0m[33m
+[0m[33m- Do not use prompt length as the main indicator of complexity.
+[0m[33m- Technical terminology alone does not make a prompt difficult.
+[0m[33m- A long prompt can be trivial.
+[0m[33m- A short prompt can be very difficult.
+[0m[33m
+[0m[33mReturn JSON only:
+[0m[33m{"complexity": 0.50}
+[0m[33m
+[0m[33mDo not include explanations, Markdown, or additional properties.
+[0m[33m<|im_end|>
+[0m[33m<|im_start|>user
+[0m[33mOrganize a six-team outdoor league where each pair plays once, every team gets at least 48 hours between matches, two teams share players and cannot play simultaneously, and rain may remove any weekend. Describe a scheduling and rescheduling method that protects rest and shared-player constraints, and explain when finishing by a fixed date cannot be guaranteed.<|im_end|>
+[0m[33m<|im_start|>assistant
+[0m[32m<think>
+[0m[32m
+[0m[32m</think>
+[0m[32m
+[0m[32m{"complexity":0.75}<|im_end|>[0m
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_smoke_50/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+[3m              Step 0               [0m
+┏━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃[1;35m [0m[1;35mMetric              [0m[1;35m [0m┃[1;35m [0m[1;35mValue   [0m[1;35m [0m┃
+┡━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│[36m [0m[36mepoch               [0m[36m [0m│[32m [0m[32m0       [0m[32m [0m│
+│[36m [0m[36mlearning_rate       [0m[36m [0m│[32m [0m[32m0.000100[0m[32m [0m│
+│[36m [0m[36mnum_loss_tokens     [0m[36m [0m│[32m [0m[32m8.000000[0m[32m [0m│
+│[36m [0m[36mnum_sequences       [0m[36m [0m│[32m [0m[32m8       [0m[32m [0m│
+│[36m [0m[36mnum_tokens          [0m[36m [0m│[32m [0m[32m2523    [0m[32m [0m│
+│[36m [0m[36mprogress            [0m[36m [0m│[32m [0m[32m0.055556[0m[32m [0m│
+│[36m [0m[36mtime/finish_batch   [0m[36m [0m│[32m [0m[32m4.179855[0m[32m [0m│
+│[36m [0m[36mtime/get_batch      [0m[36m [0m│[32m [0m[32m0.067037[0m[32m [0m│
+│[36m [0m[36mtime/step           [0m[36m [0m│[32m [0m[32m4.163871[0m[32m [0m│
+│[36m [0m[36mtime/submit_batch   [0m[36m [0m│[32m [0m[32m0.070628[0m[32m [0m│
+│[36m [0m[36mtrain_mean_bpb      [0m[36m [0m│[32m [0m[32m1.912839[0m[32m [0m│
+│[36m [0m[36mtrain_mean_nll      [0m[36m [0m│[32m [0m[32m3.598815[0m[32m [0m│
+└──────────────────────┴──────────┘
+tinker_cookbook.supervised.train:419 [INFO] [33m<|im_start|>system
+[0m[33mYou are a prompt complexity classifier.
+[0m[33m
+[0m[33mEstimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+[0m[33m
+[0m[33mComplexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+[0m[33m
+[0m[33mUse these scores:
+[0m[33m
+[0m[33m- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+[0m[33m- 0.25 — Easy: limited interpretation or a few straightforward steps.
+[0m[33m- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+[0m[33m- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+[0m[33m- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+[0m[33m
+[0m[33mImportant:
+[0m[33m
+[0m[33m- Do not use prompt length as the main indicator of complexity.
+[0m[33m- Technical terminology alone does not make a prompt difficult.
+[0m[33m- A long prompt can be trivial.
+[0m[33m- A short prompt can be very difficult.
+[0m[33m
+[0m[33mReturn JSON only:
+[0m[33m{"complexity": 0.50}
+[0m[33m
+[0m[33mDo not include explanations, Markdown, or additional properties.
+[0m[33m<|im_end|>
+[0m[33m<|im_start|>user
+[0m[33mWe run a fleet of reusable delivery containers. Returns are delayed and uncertain, demand differs by depot, transfers consume vehicle capacity, and shortages incur penalties while purchases tie up capital. Formulate a multistage stochastic optimization model with nonanticipative decisions, propose a tractable solution method, and explain how to evaluate its policy against a hindsight optimum without leaking future information.<|im_end|>
+[0m[33m<|im_start|>assistant
+[0m[32m<think>
+[0m[32m
+[0m[32m</think>
+[0m[32m
+[0m[32m{"complexity":1.00}<|im_end|>[0m
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_smoke_50/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+[3m              Step 1               [0m
+┏━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃[1;35m [0m[1;35mMetric              [0m[1;35m [0m┃[1;35m [0m[1;35mValue   [0m[1;35m [0m┃
+┡━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│[36m [0m[36mepoch               [0m[36m [0m│[32m [0m[32m0       [0m[32m [0m│
+│[36m [0m[36mlearning_rate       [0m[36m [0m│[32m [0m[32m0.000094[0m[32m [0m│
+│[36m [0m[36mnum_loss_tokens     [0m[36m [0m│[32m [0m[32m8.000000[0m[32m [0m│
+│[36m [0m[36mnum_sequences       [0m[36m [0m│[32m [0m[32m8       [0m[32m [0m│
+│[36m [0m[36mnum_tokens          [0m[36m [0m│[32m [0m[32m2636    [0m[32m [0m│
+│[36m [0m[36mprogress            [0m[36m [0m│[32m [0m[32m0.111111[0m[32m [0m│
+│[36m [0m[36mtime/finish_batch   [0m[36m [0m│[32m [0m[32m1.982361[0m[32m [0m│
+│[36m [0m[36mtime/get_batch      [0m[36m [0m│[32m [0m[32m0.046369[0m[32m [0m│
+│[36m [0m[36mtime/step           [0m[36m [0m│[32m [0m[32m1.978491[0m[32m [0m│
+│[36m [0m[36mtime/submit_batch   [0m[36m [0m│[32m [0m[32m0.047482[0m[32m [0m│
+│[36m [0m[36mtrain_mean_bpb      [0m[36m [0m│[32m [0m[32m1.498470[0m[32m [0m│
+│[36m [0m[36mtrain_mean_nll      [0m[36m [0m│[32m [0m[32m2.819221[0m[32m [0m│
+└──────────────────────┴──────────┘
+tinker_cookbook.supervised.train:419 [INFO] [33m<|im_start|>system
+[0m[33mYou are a prompt complexity classifier.
+[0m[33m
+[0m[33mEstimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+[0m[33m
+[0m[33mComplexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+[0m[33m
+[0m[33mUse these scores:
+[0m[33m
+[0m[33m- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+[0m[33m- 0.25 — Easy: limited interpretation or a few straightforward steps.
+[0m[33m- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+[0m[33m- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+[0m[33m- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+[0m[33m
+[0m[33mImportant:
+[0m[33m
+[0m[33m- Do not use prompt length as the main indicator of complexity.
+[0m[33m- Technical terminology alone does not make a prompt difficult.
+[0m[33m- A long prompt can be trivial.
+[0m[33m- A short prompt can be very difficult.
+[0m[33m
+[0m[33mReturn JSON only:
+[0m[33m{"complexity": 0.50}
+[0m[33m
+[0m[33mDo not include explanations, Markdown, or additional properties.
+[0m[33m<|im_end|>
+[0m[33m<|im_start|>user
+[0m[33mFor a plugin that can call arbitrary external code, prove whether a general checker can always determine if every possible execution eventually releases all acquired resources. State the computation model, give a reduction supporting your conclusion, and design a useful restricted checker whose guarantees and false-alarm behavior are explicit.<|im_end|>
+[0m[33m<|im_start|>assistant
+[0m[32m<think>
+[0m[32m
+[0m[32m</think>
+[0m[32m
+[0m[32m{"complexity":1.00}<|im_end|>[0m
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_smoke_50/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+[3m              Step 2               [0m
+┏━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃[1;35m [0m[1;35mMetric              [0m[1;35m [0m┃[1;35m [0m[1;35mValue   [0m[1;35m [0m┃
+┡━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│[36m [0m[36mepoch               [0m[36m [0m│[32m [0m[32m0       [0m[32m [0m│
+│[36m [0m[36mlearning_rate       [0m[36m [0m│[32m [0m[32m0.000089[0m[32m [0m│
+│[36m [0m[36mnum_loss_tokens     [0m[36m [0m│[32m [0m[32m8.000000[0m[32m [0m│
+│[36m [0m[36mnum_sequences       [0m[36m [0m│[32m [0m[32m8       [0m[32m [0m│
+│[36m [0m[36mnum_tokens          [0m[36m [0m│[32m [0m[32m2574    [0m[32m [0m│
+│[36m [0m[36mprogress            [0m[36m [0m│[32m [0m[32m0.166667[0m[32m [0m│
+│[36m [0m[36mtime/finish_batch   [0m[36m [0m│[32m [0m[32m1.336481[0m[32m [0m│
+│[36m [0m[36mtime/get_batch      [0m[36m [0m│[32m [0m[32m0.038120[0m[32m [0m│
+│[36m [0m[36mtime/step           [0m[36m [0m│[32m [0m[32m1.334260[0m[32m [0m│
+│[36m [0m[36mtime/submit_batch   [0m[36m [0m│[32m [0m[32m0.039226[0m[32m [0m│
+│[36m [0m[36mtrain_mean_bpb      [0m[36m [0m│[32m [0m[32m0.382659[0m[32m [0m│
+│[36m [0m[36mtrain_mean_nll      [0m[36m [0m│[32m [0m[32m0.719934[0m[32m [0m│
+└──────────────────────┴──────────┘
+tinker_cookbook.supervised.train:419 [INFO] [33m<|im_start|>system
+[0m[33mYou are a prompt complexity classifier.
+[0m[33m
+[0m[33mEstimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+[0m[33m
+[0m[33mComplexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+[0m[33m
+[0m[33mUse these scores:
+[0m[33m
+[0m[33m- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+[0m[33m- 0.25 — Easy: limited interpretation or a few straightforward steps.
+[0m[33m- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+[0m[33m- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+[0m[33m- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+[0m[33m
+[0m[33mImportant:
+[0m[33m
+[0m[33m- Do not use prompt length as the main indicator of complexity.
+[0m[33m- Technical terminology alone does not make a prompt difficult.
+[0m[33m- A long prompt can be trivial.
+[0m[33m- A short prompt can be very difficult.
+[0m[33m
+[0m[33mReturn JSON only:
+[0m[33m{"complexity": 0.50}
+[0m[33m
+[0m[33mDo not include explanations, Markdown, or additional properties.
+[0m[33m<|im_end|>
+[0m[33m<|im_start|>user
+[0m[33mA panel discussion must present two witnesses fairly, but their accounts conflict: one recalls the alarm before the lights failed, the other recalls it after; the only recording has a 90-second gap spanning both events. Draft a moderator's briefing that separates observations from inference, identifies the evidence still needed, and avoids presenting either chronology as established.<|im_end|>
+[0m[33m<|im_start|>assistant
+[0m[32m<think>
+[0m[32m
+[0m[32m</think>
+[0m[32m
+[0m[32m{"complexity":0.75}<|im_end|>[0m
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_smoke_50/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+[3m              Step 3               [0m
+┏━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃[1;35m [0m[1;35mMetric              [0m[1;35m [0m┃[1;35m [0m[1;35mValue   [0m[1;35m [0m┃
+┡━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│[36m [0m[36mepoch               [0m[36m [0m│[32m [0m[32m0       [0m[32m [0m│
+│[36m [0m[36mlearning_rate       [0m[36m [0m│[32m [0m[32m0.000083[0m[32m [0m│
+│[36m [0m[36mnum_loss_tokens     [0m[36m [0m│[32m [0m[32m8.000000[0m[32m [0m│
+│[36m [0m[36mnum_sequences       [0m[36m [0m│[32m [0m[32m8       [0m[32m [0m│
+│[36m [0m[36mnum_tokens          [0m[36m [0m│[32m [0m[32m2486    [0m[32m [0m│
+│[36m [0m[36mprogress            [0m[36m [0m│[32m [0m[32m0.222222[0m[32m [0m│
+│[36m [0m[36mtime/finish_batch   [0m[36m [0m│[32m [0m[32m1.733600[0m[32m [0m│
+│[36m [0m[36mtime/get_batch      [0m[36m [0m│[32m [0m[32m0.037335[0m[32m [0m│
+│[36m [0m[36mtime/step           [0m[36m [0m│[32m [0m[32m1.729014[0m[32m [0m│
+│[36m [0m[36mtime/submit_batch   [0m[36m [0m│[32m [0m[32m0.038649[0m[32m [0m│
+│[36m [0m[36mtrain_mean_bpb      [0m[36m [0m│[32m [0m[32m0.328230[0m[32m [0m│
+│[36m [0m[36mtrain_mean_nll      [0m[36m [0m│[32m [0m[32m0.617532[0m[32m [0m│
+└──────────────────────┴──────────┘
+tinker_cookbook.supervised.train:419 [INFO] [33m<|im_start|>system
+[0m[33mYou are a prompt complexity classifier.
+[0m[33m
+[0m[33mEstimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+[0m[33m
+[0m[33mComplexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+[0m[33m
+[0m[33mUse these scores:
+[0m[33m
+[0m[33m- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+[0m[33m- 0.25 — Easy: limited interpretation or a few straightforward steps.
+[0m[33m- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+[0m[33m- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+[0m[33m- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+[0m[33m
+[0m[33mImportant:
+[0m[33m
+[0m[33m- Do not use prompt length as the main indicator of complexity.
+[0m[33m- Technical terminology alone does not make a prompt difficult.
+[0m[33m- A long prompt can be trivial.
+[0m[33m- A short prompt can be very difficult.
+[0m[33m
+[0m[33mReturn JSON only:
+[0m[33m{"complexity": 0.50}
+[0m[33m
+[0m[33mDo not include explanations, Markdown, or additional properties.
+[0m[33m<|im_end|>
+[0m[33m<|im_start|>user
+[0m[33mA satisfaction survey received 40 responses from new customers with an average rating of 3.5 and 160 from returning customers with an average of 4.5. Calculate the overall average and explain why simply averaging 3.5 and 4.5 would be misleading.<|im_end|>
+[0m[33m<|im_start|>assistant
+[0m[32m<think>
+[0m[32m
+[0m[32m</think>
+[0m[32m
+[0m[32m{"complexity":0.50}<|im_end|>[0m
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_smoke_50/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+[3m              Step 4               [0m
+┏━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃[1;35m [0m[1;35mMetric              [0m[1;35m [0m┃[1;35m [0m[1;35mValue   [0m[1;35m [0m┃
+┡━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│[36m [0m[36mepoch               [0m[36m [0m│[32m [0m[32m0       [0m[32m [0m│
+│[36m [0m[36mlearning_rate       [0m[36m [0m│[32m [0m[32m0.000078[0m[32m [0m│
+│[36m [0m[36mnum_loss_tokens     [0m[36m [0m│[32m [0m[32m8.000000[0m[32m [0m│
+│[36m [0m[36mnum_sequences       [0m[36m [0m│[32m [0m[32m8       [0m[32m [0m│
+│[36m [0m[36mnum_tokens          [0m[36m [0m│[32m [0m[32m2560    [0m[32m [0m│
+│[36m [0m[36mprogress            [0m[36m [0m│[32m [0m[32m0.277778[0m[32m [0m│
+│[36m [0m[36mtime/finish_batch   [0m[36m [0m│[32m [0m[32m1.569871[0m[32m [0m│
+│[36m [0m[36mtime/get_batch      [0m[36m [0m│[32m [0m[32m0.037029[0m[32m [0m│
+│[36m [0m[36mtime/step           [0m[36m [0m│[32m [0m[32m1.567626[0m[32m [0m│
+│[36m [0m[36mtime/submit_batch   [0m[36m [0m│[32m [0m[32m0.038608[0m[32m [0m│
+│[36m [0m[36mtrain_mean_bpb      [0m[36m [0m│[32m [0m[32m0.291424[0m[32m [0m│
+│[36m [0m[36mtrain_mean_nll      [0m[36m [0m│[32m [0m[32m0.548286[0m[32m [0m│
+└──────────────────────┴──────────┘
+tinker_cookbook.supervised.train:543 [INFO] Starting epoch 1
+tinker_cookbook.supervised.train:419 [INFO] [33m<|im_start|>system
+[0m[33mYou are a prompt complexity classifier.
+[0m[33m
+[0m[33mEstimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+[0m[33m
+[0m[33mComplexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+[0m[33m
+[0m[33mUse these scores:
+[0m[33m
+[0m[33m- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+[0m[33m- 0.25 — Easy: limited interpretation or a few straightforward steps.
+[0m[33m- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+[0m[33m- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+[0m[33m- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+[0m[33m
+[0m[33mImportant:
+[0m[33m
+[0m[33m- Do not use prompt length as the main indicator of complexity.
+[0m[33m- Technical terminology alone does not make a prompt difficult.
+[0m[33m- A long prompt can be trivial.
+[0m[33m- A short prompt can be very difficult.
+[0m[33m
+[0m[33mReturn JSON only:
+[0m[33m{"complexity": 0.50}
+[0m[33m
+[0m[33mDo not include explanations, Markdown, or additional properties.
+[0m[33m<|im_end|>
+[0m[33m<|im_start|>user
+[0m[33mA small community shares one water tank. Refills are unpredictable, households may exaggerate their needs, essential use must be protected, and allocations must never exceed water physically present. Formalize a feasible allocation mechanism, analyze whether truthful reporting, equal treatment of equal needs, and full efficiency can all be guaranteed, and prove any impossibility claim under clearly stated preferences.<|im_end|>
+[0m[33m<|im_start|>assistant
+[0m[32m<think>
+[0m[32m
+[0m[32m</think>
+[0m[32m
+[0m[32m{"complexity":1.00}<|im_end|>[0m
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_smoke_50/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+[3m              Step 5               [0m
+┏━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃[1;35m [0m[1;35mMetric              [0m[1;35m [0m┃[1;35m [0m[1;35mValue   [0m[1;35m [0m┃
+┡━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│[36m [0m[36mepoch               [0m[36m [0m│[32m [0m[32m0       [0m[32m [0m│
+│[36m [0m[36mlearning_rate       [0m[36m [0m│[32m [0m[32m0.000072[0m[32m [0m│
+│[36m [0m[36mnum_loss_tokens     [0m[36m [0m│[32m [0m[32m8.000000[0m[32m [0m│
+│[36m [0m[36mnum_sequences       [0m[36m [0m│[32m [0m[32m8       [0m[32m [0m│
+│[36m [0m[36mnum_tokens          [0m[36m [0m│[32m [0m[32m2483    [0m[32m [0m│
+│[36m [0m[36mprogress            [0m[36m [0m│[32m [0m[32m0.333333[0m[32m [0m│
+│[36m [0m[36mtime/finish_batch   [0m[36m [0m│[32m [0m[32m1.469493[0m[32m [0m│
+│[36m [0m[36mtime/get_batch      [0m[36m [0m│[32m [0m[32m0.039414[0m[32m [0m│
+│[36m [0m[36mtime/step           [0m[36m [0m│[32m [0m[32m1.467163[0m[32m [0m│
+│[36m [0m[36mtime/submit_batch   [0m[36m [0m│[32m [0m[32m0.041243[0m[32m [0m│
+│[36m [0m[36mtrain_mean_bpb      [0m[36m [0m│[32m [0m[32m0.215552[0m[32m [0m│
+│[36m [0m[36mtrain_mean_nll      [0m[36m [0m│[32m [0m[32m0.405539[0m[32m [0m│
+└──────────────────────┴──────────┘
+tinker_cookbook.supervised.train:419 [INFO] [33m<|im_start|>system
+[0m[33mYou are a prompt complexity classifier.
+[0m[33m
+[0m[33mEstimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+[0m[33m
+[0m[33mComplexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+[0m[33m
+[0m[33mUse these scores:
+[0m[33m
+[0m[33m- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+[0m[33m- 0.25 — Easy: limited interpretation or a few straightforward steps.
+[0m[33m- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+[0m[33m- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+[0m[33m- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+[0m[33m
+[0m[33mImportant:
+[0m[33m
+[0m[33m- Do not use prompt length as the main indicator of complexity.
+[0m[33m- Technical terminology alone does not make a prompt difficult.
+[0m[33m- A long prompt can be trivial.
+[0m[33m- A short prompt can be very difficult.
+[0m[33m
+[0m[33mReturn JSON only:
+[0m[33m{"complexity": 0.50}
+[0m[33m
+[0m[33mDo not include explanations, Markdown, or additional properties.
+[0m[33m<|im_end|>
+[0m[33m<|im_start|>user
+[0m[33mPut these four items into a Markdown bullet list in the same order: compost, seeds, gloves, watering can.<|im_end|>
+[0m[33m<|im_start|>assistant
+[0m[32m<think>
+[0m[32m
+[0m[32m</think>
+[0m[32m
+[0m[32m{"complexity":0.00}<|im_end|>[0m
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_smoke_50/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+[3m              Step 6               [0m
+┏━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃[1;35m [0m[1;35mMetric              [0m[1;35m [0m┃[1;35m [0m[1;35mValue   [0m[1;35m [0m┃
+┡━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│[36m [0m[36mepoch               [0m[36m [0m│[32m [0m[32m1       [0m[32m [0m│
+│[36m [0m[36mlearning_rate       [0m[36m [0m│[32m [0m[32m0.000067[0m[32m [0m│
+│[36m [0m[36mnum_loss_tokens     [0m[36m [0m│[32m [0m[32m8.000000[0m[32m [0m│
+│[36m [0m[36mnum_sequences       [0m[36m [0m│[32m [0m[32m8       [0m[32m [0m│
+│[36m [0m[36mnum_tokens          [0m[36m [0m│[32m [0m[32m2611    [0m[32m [0m│
+│[36m [0m[36mprogress            [0m[36m [0m│[32m [0m[32m0.388889[0m[32m [0m│
+│[36m [0m[36mtime/finish_batch   [0m[36m [0m│[32m [0m[32m1.983510[0m[32m [0m│
+│[36m [0m[36mtime/get_batch      [0m[36m [0m│[32m [0m[32m0.033141[0m[32m [0m│
+│[36m [0m[36mtime/step           [0m[36m [0m│[32m [0m[32m1.976930[0m[32m [0m│
+│[36m [0m[36mtime/submit_batch   [0m[36m [0m│[32m [0m[32m0.037688[0m[32m [0m│
+│[36m [0m[36mtrain_mean_bpb      [0m[36m [0m│[32m [0m[32m0.111285[0m[32m [0m│
+│[36m [0m[36mtrain_mean_nll      [0m[36m [0m│[32m [0m[32m0.209372[0m[32m [0m│
+└──────────────────────┴──────────┘
+tinker_cookbook.supervised.train:419 [INFO] [33m<|im_start|>system
+[0m[33mYou are a prompt complexity classifier.
+[0m[33m
+[0m[33mEstimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+[0m[33m
+[0m[33mComplexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+[0m[33m
+[0m[33mUse these scores:
+[0m[33m
+[0m[33m- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+[0m[33m- 0.25 — Easy: limited interpretation or a few straightforward steps.
+[0m[33m- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+[0m[33m- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+[0m[33m- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+[0m[33m
+[0m[33mImportant:
+[0m[33m
+[0m[33m- Do not use prompt length as the main indicator of complexity.
+[0m[33m- Technical terminology alone does not make a prompt difficult.
+[0m[33m- A long prompt can be trivial.
+[0m[33m- A short prompt can be very difficult.
+[0m[33m
+[0m[33mReturn JSON only:
+[0m[33m{"complexity": 0.50}
+[0m[33m
+[0m[33mDo not include explanations, Markdown, or additional properties.
+[0m[33m<|im_end|>
+[0m[33m<|im_start|>user
+[0m[33mAt weeks 1 and 2, treatment is chosen partly from symptoms; week-1 treatment changes week-2 symptoms, which affect both week-2 treatment and the final outcome. With observational records of treatment and symptoms at both weeks, derive an estimator for the effect of a fixed two-week treatment regime, state the required assumptions, and explain why ordinary adjustment for week-2 symptoms can fail.<|im_end|>
+[0m[33m<|im_start|>assistant
+[0m[32m<think>
+[0m[32m
+[0m[32m</think>
+[0m[32m
+[0m[32m{"complexity":1.00}<|im_end|>[0m
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_smoke_50/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+[3m              Step 7               [0m
+┏━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃[1;35m [0m[1;35mMetric              [0m[1;35m [0m┃[1;35m [0m[1;35mValue   [0m[1;35m [0m┃
+┡━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│[36m [0m[36mepoch               [0m[36m [0m│[32m [0m[32m1       [0m[32m [0m│
+│[36m [0m[36mlearning_rate       [0m[36m [0m│[32m [0m[32m0.000061[0m[32m [0m│
+│[36m [0m[36mnum_loss_tokens     [0m[36m [0m│[32m [0m[32m8.000000[0m[32m [0m│
+│[36m [0m[36mnum_sequences       [0m[36m [0m│[32m [0m[32m8       [0m[32m [0m│
+│[36m [0m[36mnum_tokens          [0m[36m [0m│[32m [0m[32m2540    [0m[32m [0m│
+│[36m [0m[36mprogress            [0m[36m [0m│[32m [0m[32m0.444444[0m[32m [0m│
+│[36m [0m[36mtime/finish_batch   [0m[36m [0m│[32m [0m[32m1.615594[0m[32m [0m│
+│[36m [0m[36mtime/get_batch      [0m[36m [0m│[32m [0m[32m0.034243[0m[32m [0m│
+│[36m [0m[36mtime/step           [0m[36m [0m│[32m [0m[32m1.613383[0m[32m [0m│
+│[36m [0m[36mtime/submit_batch   [0m[36m [0m│[32m [0m[32m0.035569[0m[32m [0m│
+│[36m [0m[36mtrain_mean_bpb      [0m[36m [0m│[32m [0m[32m0.012657[0m[32m [0m│
+│[36m [0m[36mtrain_mean_nll      [0m[36m [0m│[32m [0m[32m0.023812[0m[32m [0m│
+└──────────────────────┴──────────┘
+tinker_cookbook.supervised.train:419 [INFO] [33m<|im_start|>system
+[0m[33mYou are a prompt complexity classifier.
+[0m[33m
+[0m[33mEstimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+[0m[33m
+[0m[33mComplexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+[0m[33m
+[0m[33mUse these scores:
+[0m[33m
+[0m[33m- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+[0m[33m- 0.25 — Easy: limited interpretation or a few straightforward steps.
+[0m[33m- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+[0m[33m- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+[0m[33m- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+[0m[33m
+[0m[33mImportant:
+[0m[33m
+[0m[33m- Do not use prompt length as the main indicator of complexity.
+[0m[33m- Technical terminology alone does not make a prompt difficult.
+[0m[33m- A long prompt can be trivial.
+[0m[33m- A short prompt can be very difficult.
+[0m[33m
+[0m[33mReturn JSON only:
+[0m[33m{"complexity": 0.50}
+[0m[33m
+[0m[33mDo not include explanations, Markdown, or additional properties.
+[0m[33m<|im_end|>
+[0m[33m<|im_start|>user
+[0m[33mA jacket costs $80 and has a 15% discount; delivery adds $6 after the discount. Calculate the amount due.<|im_end|>
+[0m[33m<|im_start|>assistant
+[0m[32m<think>
+[0m[32m
+[0m[32m</think>
+[0m[32m
+[0m[32m{"complexity":0.25}<|im_end|>[0m
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_smoke_50/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+[3m              Step 8               [0m
+┏━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃[1;35m [0m[1;35mMetric              [0m[1;35m [0m┃[1;35m [0m[1;35mValue   [0m[1;35m [0m┃
+┡━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│[36m [0m[36mepoch               [0m[36m [0m│[32m [0m[32m1       [0m[32m [0m│
+│[36m [0m[36mlearning_rate       [0m[36m [0m│[32m [0m[32m0.000056[0m[32m [0m│
+│[36m [0m[36mnum_loss_tokens     [0m[36m [0m│[32m [0m[32m8.000000[0m[32m [0m│
+│[36m [0m[36mnum_sequences       [0m[36m [0m│[32m [0m[32m8       [0m[32m [0m│
+│[36m [0m[36mnum_tokens          [0m[36m [0m│[32m [0m[32m2614    [0m[32m [0m│
+│[36m [0m[36mprogress            [0m[36m [0m│[32m [0m[32m0.500000[0m[32m [0m│
+│[36m [0m[36mtime/finish_batch   [0m[36m [0m│[32m [0m[32m1.604602[0m[32m [0m│
+│[36m [0m[36mtime/get_batch      [0m[36m [0m│[32m [0m[32m0.033618[0m[32m [0m│
+│[36m [0m[36mtime/step           [0m[36m [0m│[32m [0m[32m1.602247[0m[32m [0m│
+│[36m [0m[36mtime/submit_batch   [0m[36m [0m│[32m [0m[32m0.034696[0m[32m [0m│
+│[36m [0m[36mtrain_mean_bpb      [0m[36m [0m│[32m [0m[32m0.017560[0m[32m [0m│
+│[36m [0m[36mtrain_mean_nll      [0m[36m [0m│[32m [0m[32m0.033038[0m[32m [0m│
+└──────────────────────┴──────────┘
+tinker_cookbook.supervised.train:419 [INFO] [33m<|im_start|>system
+[0m[33mYou are a prompt complexity classifier.
+[0m[33m
+[0m[33mEstimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+[0m[33m
+[0m[33mComplexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+[0m[33m
+[0m[33mUse these scores:
+[0m[33m
+[0m[33m- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+[0m[33m- 0.25 — Easy: limited interpretation or a few straightforward steps.
+[0m[33m- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+[0m[33m- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+[0m[33m- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+[0m[33m
+[0m[33mImportant:
+[0m[33m
+[0m[33m- Do not use prompt length as the main indicator of complexity.
+[0m[33m- Technical terminology alone does not make a prompt difficult.
+[0m[33m- A long prompt can be trivial.
+[0m[33m- A short prompt can be very difficult.
+[0m[33m
+[0m[33mReturn JSON only:
+[0m[33m{"complexity": 0.50}
+[0m[33m
+[0m[33mDo not include explanations, Markdown, or additional properties.
+[0m[33m<|im_end|>
+[0m[33m<|im_start|>user
+[0m[33mOur archive accepts documents signed through delegated keys, supports offline verification, allows later revocation, and timestamps submissions using servers whose clocks may be wrong. Define what a verifier can soundly conclude about signing authority at submission time, construct indistinguishable histories exposing the limits, and propose a protocol with explicit trust assumptions and downgrade-resistant evidence.<|im_end|>
+[0m[33m<|im_start|>assistant
+[0m[32m<think>
+[0m[32m
+[0m[32m</think>
+[0m[32m
+[0m[32m{"complexity":1.00}<|im_end|>[0m
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_smoke_50/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+[3m              Step 9               [0m
+┏━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃[1;35m [0m[1;35mMetric              [0m[1;35m [0m┃[1;35m [0m[1;35mValue   [0m[1;35m [0m┃
+┡━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│[36m [0m[36mepoch               [0m[36m [0m│[32m [0m[32m1       [0m[32m [0m│
+│[36m [0m[36mlearning_rate       [0m[36m [0m│[32m [0m[32m0.000050[0m[32m [0m│
+│[36m [0m[36mnum_loss_tokens     [0m[36m [0m│[32m [0m[32m8.000000[0m[32m [0m│
+│[36m [0m[36mnum_sequences       [0m[36m [0m│[32m [0m[32m8       [0m[32m [0m│
+│[36m [0m[36mnum_tokens          [0m[36m [0m│[32m [0m[32m2406    [0m[32m [0m│
+│[36m [0m[36mprogress            [0m[36m [0m│[32m [0m[32m0.555556[0m[32m [0m│
+│[36m [0m[36mtime/finish_batch   [0m[36m [0m│[32m [0m[32m1.433641[0m[32m [0m│
+│[36m [0m[36mtime/get_batch      [0m[36m [0m│[32m [0m[32m0.034411[0m[32m [0m│
+│[36m [0m[36mtime/step           [0m[36m [0m│[32m [0m[32m1.431295[0m[32m [0m│
+│[36m [0m[36mtime/submit_batch   [0m[36m [0m│[32m [0m[32m0.035634[0m[32m [0m│
+│[36m [0m[36mtrain_mean_bpb      [0m[36m [0m│[32m [0m[32m0.024010[0m[32m [0m│
+│[36m [0m[36mtrain_mean_nll      [0m[36m [0m│[32m [0m[32m0.045173[0m[32m [0m│
+└──────────────────────┴──────────┘
+tinker_cookbook.supervised.train:419 [INFO] [33m<|im_start|>system
+[0m[33mYou are a prompt complexity classifier.
+[0m[33m
+[0m[33mEstimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+[0m[33m
+[0m[33mComplexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+[0m[33m
+[0m[33mUse these scores:
+[0m[33m
+[0m[33m- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+[0m[33m- 0.25 — Easy: limited interpretation or a few straightforward steps.
+[0m[33m- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+[0m[33m- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+[0m[33m- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+[0m[33m
+[0m[33mImportant:
+[0m[33m
+[0m[33m- Do not use prompt length as the main indicator of complexity.
+[0m[33m- Technical terminology alone does not make a prompt difficult.
+[0m[33m- A long prompt can be trivial.
+[0m[33m- A short prompt can be very difficult.
+[0m[33m
+[0m[33mReturn JSON only:
+[0m[33m{"complexity": 0.50}
+[0m[33m
+[0m[33mDo not include explanations, Markdown, or additional properties.
+[0m[33m<|im_end|>
+[0m[33m<|im_start|>user
+[0m[33mFrom this confirmation, return only the booking reference: Guest: Mira Patel; Arrival: 18 May; Nights: 3; Booking reference: HX4829; Room: twin.<|im_end|>
+[0m[33m<|im_start|>assistant
+[0m[32m<think>
+[0m[32m
+[0m[32m</think>
+[0m[32m
+[0m[32m{"complexity":0.00}<|im_end|>[0m
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_smoke_50/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+[3m              Step 10              [0m
+┏━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃[1;35m [0m[1;35mMetric              [0m[1;35m [0m┃[1;35m [0m[1;35mValue   [0m[1;35m [0m┃
+┡━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│[36m [0m[36mepoch               [0m[36m [0m│[32m [0m[32m1       [0m[32m [0m│
+│[36m [0m[36mlearning_rate       [0m[36m [0m│[32m [0m[32m0.000044[0m[32m [0m│
+│[36m [0m[36mnum_loss_tokens     [0m[36m [0m│[32m [0m[32m8.000000[0m[32m [0m│
+│[36m [0m[36mnum_sequences       [0m[36m [0m│[32m [0m[32m8       [0m[32m [0m│
+│[36m [0m[36mnum_tokens          [0m[36m [0m│[32m [0m[32m2578    [0m[32m [0m│
+│[36m [0m[36mprogress            [0m[36m [0m│[32m [0m[32m0.611111[0m[32m [0m│
+│[36m [0m[36mtime/finish_batch   [0m[36m [0m│[32m [0m[32m1.769769[0m[32m [0m│
+│[36m [0m[36mtime/get_batch      [0m[36m [0m│[32m [0m[32m0.033520[0m[32m [0m│
+│[36m [0m[36mtime/step           [0m[36m [0m│[32m [0m[32m1.767327[0m[32m [0m│
+│[36m [0m[36mtime/submit_batch   [0m[36m [0m│[32m [0m[32m0.039812[0m[32m [0m│
+│[36m [0m[36mtrain_mean_bpb      [0m[36m [0m│[32m [0m[32m0.040382[0m[32m [0m│
+│[36m [0m[36mtrain_mean_nll      [0m[36m [0m│[32m [0m[32m0.075975[0m[32m [0m│
+└──────────────────────┴──────────┘
+tinker_cookbook.supervised.train:543 [INFO] Starting epoch 2
+tinker_cookbook.supervised.train:419 [INFO] [33m<|im_start|>system
+[0m[33mYou are a prompt complexity classifier.
+[0m[33m
+[0m[33mEstimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+[0m[33m
+[0m[33mComplexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+[0m[33m
+[0m[33mUse these scores:
+[0m[33m
+[0m[33m- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+[0m[33m- 0.25 — Easy: limited interpretation or a few straightforward steps.
+[0m[33m- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+[0m[33m- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+[0m[33m- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+[0m[33m
+[0m[33mImportant:
+[0m[33m
+[0m[33m- Do not use prompt length as the main indicator of complexity.
+[0m[33m- Technical terminology alone does not make a prompt difficult.
+[0m[33m- A long prompt can be trivial.
+[0m[33m- A short prompt can be very difficult.
+[0m[33m
+[0m[33mReturn JSON only:
+[0m[33m{"complexity": 0.50}
+[0m[33m
+[0m[33mDo not include explanations, Markdown, or additional properties.
+[0m[33m<|im_end|>
+[0m[33m<|im_start|>user
+[0m[33mPlan a kitchen renovation with a $12,000 cap and a five-week deadline. Cabinets cost $6,000 and arrive in three to six weeks; resurfacing costs $2,500 and takes one week; wiring costs $2,000 and must precede either option; plumbing may add $1,500 after inspection; fitting takes one week and cannot overlap wiring. Recommend a primary plan and fallback with decision dates, explaining which completion promises are supportable.<|im_end|>
+[0m[33m<|im_start|>assistant
+[0m[32m<think>
+[0m[32m
+[0m[32m</think>
+[0m[32m
+[0m[32m{"complexity":0.75}<|im_end|>[0m
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_smoke_50/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+[3m              Step 11              [0m
+┏━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃[1;35m [0m[1;35mMetric              [0m[1;35m [0m┃[1;35m [0m[1;35mValue   [0m[1;35m [0m┃
+┡━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│[36m [0m[36mepoch               [0m[36m [0m│[32m [0m[32m1       [0m[32m [0m│
+│[36m [0m[36mlearning_rate       [0m[36m [0m│[32m [0m[32m0.000039[0m[32m [0m│
+│[36m [0m[36mnum_loss_tokens     [0m[36m [0m│[32m [0m[32m8.000000[0m[32m [0m│
+│[36m [0m[36mnum_sequences       [0m[36m [0m│[32m [0m[32m8       [0m[32m [0m│
+│[36m [0m[36mnum_tokens          [0m[36m [0m│[32m [0m[32m2520    [0m[32m [0m│
+│[36m [0m[36mprogress            [0m[36m [0m│[32m [0m[32m0.666667[0m[32m [0m│
+│[36m [0m[36mtime/finish_batch   [0m[36m [0m│[32m [0m[32m1.616885[0m[32m [0m│
+│[36m [0m[36mtime/get_batch      [0m[36m [0m│[32m [0m[32m0.041844[0m[32m [0m│
+│[36m [0m[36mtime/step           [0m[36m [0m│[32m [0m[32m1.612003[0m[32m [0m│
+│[36m [0m[36mtime/submit_batch   [0m[36m [0m│[32m [0m[32m0.058361[0m[32m [0m│
+│[36m [0m[36mtrain_mean_bpb      [0m[36m [0m│[32m [0m[32m0.020195[0m[32m [0m│
+│[36m [0m[36mtrain_mean_nll      [0m[36m [0m│[32m [0m[32m0.037995[0m[32m [0m│
+└──────────────────────┴──────────┘
+tinker_cookbook.supervised.train:419 [INFO] [33m<|im_start|>system
+[0m[33mYou are a prompt complexity classifier.
+[0m[33m
+[0m[33mEstimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+[0m[33m
+[0m[33mComplexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+[0m[33m
+[0m[33mUse these scores:
+[0m[33m
+[0m[33m- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+[0m[33m- 0.25 — Easy: limited interpretation or a few straightforward steps.
+[0m[33m- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+[0m[33m- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+[0m[33m- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+[0m[33m
+[0m[33mImportant:
+[0m[33m
+[0m[33m- Do not use prompt length as the main indicator of complexity.
+[0m[33m- Technical terminology alone does not make a prompt difficult.
+[0m[33m- A long prompt can be trivial.
+[0m[33m- A short prompt can be very difficult.
+[0m[33m
+[0m[33mReturn JSON only:
+[0m[33m{"complexity": 0.50}
+[0m[33m
+[0m[33mDo not include explanations, Markdown, or additional properties.
+[0m[33m<|im_end|>
+[0m[33m<|im_start|>user
+[0m[33mRemove every hyphen from AB-204-XY without changing any other character.<|im_end|>
+[0m[33m<|im_start|>assistant
+[0m[32m<think>
+[0m[32m
+[0m[32m</think>
+[0m[32m
+[0m[32m{"complexity":0.00}<|im_end|>[0m
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_smoke_50/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+[3m              Step 12              [0m
+┏━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃[1;35m [0m[1;35mMetric              [0m[1;35m [0m┃[1;35m [0m[1;35mValue   [0m[1;35m [0m┃
+┡━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│[36m [0m[36mepoch               [0m[36m [0m│[32m [0m[32m2       [0m[32m [0m│
+│[36m [0m[36mlearning_rate       [0m[36m [0m│[32m [0m[32m0.000033[0m[32m [0m│
+│[36m [0m[36mnum_loss_tokens     [0m[36m [0m│[32m [0m[32m8.000000[0m[32m [0m│
+│[36m [0m[36mnum_sequences       [0m[36m [0m│[32m [0m[32m8       [0m[32m [0m│
+│[36m [0m[36mnum_tokens          [0m[36m [0m│[32m [0m[32m2535    [0m[32m [0m│
+│[36m [0m[36mprogress            [0m[36m [0m│[32m [0m[32m0.722222[0m[32m [0m│
+│[36m [0m[36mtime/finish_batch   [0m[36m [0m│[32m [0m[32m1.405141[0m[32m [0m│
+│[36m [0m[36mtime/get_batch      [0m[36m [0m│[32m [0m[32m0.034007[0m[32m [0m│
+│[36m [0m[36mtime/step           [0m[36m [0m│[32m [0m[32m1.402118[0m[32m [0m│
+│[36m [0m[36mtime/submit_batch   [0m[36m [0m│[32m [0m[32m0.035126[0m[32m [0m│
+│[36m [0m[36mtrain_mean_bpb      [0m[36m [0m│[32m [0m[32m0.014042[0m[32m [0m│
+│[36m [0m[36mtrain_mean_nll      [0m[36m [0m│[32m [0m[32m0.026419[0m[32m [0m│
+└──────────────────────┴──────────┘
+tinker_cookbook.supervised.train:419 [INFO] [33m<|im_start|>system
+[0m[33mYou are a prompt complexity classifier.
+[0m[33m
+[0m[33mEstimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+[0m[33m
+[0m[33mComplexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+[0m[33m
+[0m[33mUse these scores:
+[0m[33m
+[0m[33m- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+[0m[33m- 0.25 — Easy: limited interpretation or a few straightforward steps.
+[0m[33m- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+[0m[33m- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+[0m[33m- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+[0m[33m
+[0m[33mImportant:
+[0m[33m
+[0m[33m- Do not use prompt length as the main indicator of complexity.
+[0m[33m- Technical terminology alone does not make a prompt difficult.
+[0m[33m- A long prompt can be trivial.
+[0m[33m- A short prompt can be very difficult.
+[0m[33m
+[0m[33mReturn JSON only:
+[0m[33m{"complexity": 0.50}
+[0m[33m
+[0m[33mDo not include explanations, Markdown, or additional properties.
+[0m[33m<|im_end|>
+[0m[33m<|im_start|>user
+[0m[33mOur archive accepts documents signed through delegated keys, supports offline verification, allows later revocation, and timestamps submissions using servers whose clocks may be wrong. Define what a verifier can soundly conclude about signing authority at submission time, construct indistinguishable histories exposing the limits, and propose a protocol with explicit trust assumptions and downgrade-resistant evidence.<|im_end|>
+[0m[33m<|im_start|>assistant
+[0m[32m<think>
+[0m[32m
+[0m[32m</think>
+[0m[32m
+[0m[32m{"complexity":1.00}<|im_end|>[0m
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_smoke_50/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+[3m              Step 13              [0m
+┏━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃[1;35m [0m[1;35mMetric              [0m[1;35m [0m┃[1;35m [0m[1;35mValue   [0m[1;35m [0m┃
+┡━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│[36m [0m[36mepoch               [0m[36m [0m│[32m [0m[32m2       [0m[32m [0m│
+│[36m [0m[36mlearning_rate       [0m[36m [0m│[32m [0m[32m0.000028[0m[32m [0m│
+│[36m [0m[36mnum_loss_tokens     [0m[36m [0m│[32m [0m[32m8.000000[0m[32m [0m│
+│[36m [0m[36mnum_sequences       [0m[36m [0m│[32m [0m[32m8       [0m[32m [0m│
+│[36m [0m[36mnum_tokens          [0m[36m [0m│[32m [0m[32m2442    [0m[32m [0m│
+│[36m [0m[36mprogress            [0m[36m [0m│[32m [0m[32m0.777778[0m[32m [0m│
+│[36m [0m[36mtime/finish_batch   [0m[36m [0m│[32m [0m[32m1.628779[0m[32m [0m│
+│[36m [0m[36mtime/get_batch      [0m[36m [0m│[32m [0m[32m0.041873[0m[32m [0m│
+│[36m [0m[36mtime/step           [0m[36m [0m│[32m [0m[32m1.625400[0m[32m [0m│
+│[36m [0m[36mtime/submit_batch   [0m[36m [0m│[32m [0m[32m0.042895[0m[32m [0m│
+│[36m [0m[36mtrain_mean_bpb      [0m[36m [0m│[32m [0m[32m0.013722[0m[32m [0m│
+│[36m [0m[36mtrain_mean_nll      [0m[36m [0m│[32m [0m[32m0.025816[0m[32m [0m│
+└──────────────────────┴──────────┘
+tinker_cookbook.supervised.train:419 [INFO] [33m<|im_start|>system
+[0m[33mYou are a prompt complexity classifier.
+[0m[33m
+[0m[33mEstimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+[0m[33m
+[0m[33mComplexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+[0m[33m
+[0m[33mUse these scores:
+[0m[33m
+[0m[33m- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+[0m[33m- 0.25 — Easy: limited interpretation or a few straightforward steps.
+[0m[33m- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+[0m[33m- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+[0m[33m- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+[0m[33m
+[0m[33mImportant:
+[0m[33m
+[0m[33m- Do not use prompt length as the main indicator of complexity.
+[0m[33m- Technical terminology alone does not make a prompt difficult.
+[0m[33m- A long prompt can be trivial.
+[0m[33m- A short prompt can be very difficult.
+[0m[33m
+[0m[33mReturn JSON only:
+[0m[33m{"complexity": 0.50}
+[0m[33m
+[0m[33mDo not include explanations, Markdown, or additional properties.
+[0m[33m<|im_end|>
+[0m[33m<|im_start|>user
+[0m[33mOur .NET service sometimes hangs during shutdown: request handlers acquire a per-account semaphore and await an audit write, while the audit worker acquires a global flush lock and waits for the same account semaphore. Cancellation can occur between either acquisition. Analyze the deadlock and resource-leak risks, then propose a lock ordering and cancellation-safe cleanup strategy.<|im_end|>
+[0m[33m<|im_start|>assistant
+[0m[32m<think>
+[0m[32m
+[0m[32m</think>
+[0m[32m
+[0m[32m{"complexity":0.75}<|im_end|>[0m
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_smoke_50/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+[3m              Step 14              [0m
+┏━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃[1;35m [0m[1;35mMetric              [0m[1;35m [0m┃[1;35m [0m[1;35mValue   [0m[1;35m [0m┃
+┡━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│[36m [0m[36mepoch               [0m[36m [0m│[32m [0m[32m2       [0m[32m [0m│
+│[36m [0m[36mlearning_rate       [0m[36m [0m│[32m [0m[32m0.000022[0m[32m [0m│
+│[36m [0m[36mnum_loss_tokens     [0m[36m [0m│[32m [0m[32m8.000000[0m[32m [0m│
+│[36m [0m[36mnum_sequences       [0m[36m [0m│[32m [0m[32m8       [0m[32m [0m│
+│[36m [0m[36mnum_tokens          [0m[36m [0m│[32m [0m[32m2491    [0m[32m [0m│
+│[36m [0m[36mprogress            [0m[36m [0m│[32m [0m[32m0.833333[0m[32m [0m│
+│[36m [0m[36mtime/finish_batch   [0m[36m [0m│[32m [0m[32m1.473469[0m[32m [0m│
+│[36m [0m[36mtime/get_batch      [0m[36m [0m│[32m [0m[32m0.038963[0m[32m [0m│
+│[36m [0m[36mtime/step           [0m[36m [0m│[32m [0m[32m1.470837[0m[32m [0m│
+│[36m [0m[36mtime/submit_batch   [0m[36m [0m│[32m [0m[32m0.040053[0m[32m [0m│
+│[36m [0m[36mtrain_mean_bpb      [0m[36m [0m│[32m [0m[32m0.009241[0m[32m [0m│
+│[36m [0m[36mtrain_mean_nll      [0m[36m [0m│[32m [0m[32m0.017386[0m[32m [0m│
+└──────────────────────┴──────────┘
+tinker_cookbook.supervised.train:419 [INFO] [33m<|im_start|>system
+[0m[33mYou are a prompt complexity classifier.
+[0m[33m
+[0m[33mEstimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+[0m[33m
+[0m[33mComplexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+[0m[33m
+[0m[33mUse these scores:
+[0m[33m
+[0m[33m- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+[0m[33m- 0.25 — Easy: limited interpretation or a few straightforward steps.
+[0m[33m- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+[0m[33m- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+[0m[33m- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+[0m[33m
+[0m[33mImportant:
+[0m[33m
+[0m[33m- Do not use prompt length as the main indicator of complexity.
+[0m[33m- Technical terminology alone does not make a prompt difficult.
+[0m[33m- A long prompt can be trivial.
+[0m[33m- A short prompt can be very difficult.
+[0m[33m
+[0m[33mReturn JSON only:
+[0m[33m{"complexity": 0.50}
+[0m[33m
+[0m[33mDo not include explanations, Markdown, or additional properties.
+[0m[33m<|im_end|>
+[0m[33m<|im_start|>user
+[0m[33mAt weeks 1 and 2, treatment is chosen partly from symptoms; week-1 treatment changes week-2 symptoms, which affect both week-2 treatment and the final outcome. With observational records of treatment and symptoms at both weeks, derive an estimator for the effect of a fixed two-week treatment regime, state the required assumptions, and explain why ordinary adjustment for week-2 symptoms can fail.<|im_end|>
+[0m[33m<|im_start|>assistant
+[0m[32m<think>
+[0m[32m
+[0m[32m</think>
+[0m[32m
+[0m[32m{"complexity":1.00}<|im_end|>[0m
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_smoke_50/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+[3m              Step 15              [0m
+┏━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃[1;35m [0m[1;35mMetric              [0m[1;35m [0m┃[1;35m [0m[1;35mValue   [0m[1;35m [0m┃
+┡━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│[36m [0m[36mepoch               [0m[36m [0m│[32m [0m[32m2       [0m[32m [0m│
+│[36m [0m[36mlearning_rate       [0m[36m [0m│[32m [0m[32m0.000017[0m[32m [0m│
+│[36m [0m[36mnum_loss_tokens     [0m[36m [0m│[32m [0m[32m8.000000[0m[32m [0m│
+│[36m [0m[36mnum_sequences       [0m[36m [0m│[32m [0m[32m8       [0m[32m [0m│
+│[36m [0m[36mnum_tokens          [0m[36m [0m│[32m [0m[32m2607    [0m[32m [0m│
+│[36m [0m[36mprogress            [0m[36m [0m│[32m [0m[32m0.888889[0m[32m [0m│
+│[36m [0m[36mtime/finish_batch   [0m[36m [0m│[32m [0m[32m1.620477[0m[32m [0m│
+│[36m [0m[36mtime/get_batch      [0m[36m [0m│[32m [0m[32m0.034219[0m[32m [0m│
+│[36m [0m[36mtime/step           [0m[36m [0m│[32m [0m[32m1.617126[0m[32m [0m│
+│[36m [0m[36mtime/submit_batch   [0m[36m [0m│[32m [0m[32m0.037794[0m[32m [0m│
+│[36m [0m[36mtrain_mean_bpb      [0m[36m [0m│[32m [0m[32m0.011123[0m[32m [0m│
+│[36m [0m[36mtrain_mean_nll      [0m[36m [0m│[32m [0m[32m0.020926[0m[32m [0m│
+└──────────────────────┴──────────┘
+tinker_cookbook.supervised.train:419 [INFO] [33m<|im_start|>system
+[0m[33mYou are a prompt complexity classifier.
+[0m[33m
+[0m[33mEstimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+[0m[33m
+[0m[33mComplexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+[0m[33m
+[0m[33mUse these scores:
+[0m[33m
+[0m[33m- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+[0m[33m- 0.25 — Easy: limited interpretation or a few straightforward steps.
+[0m[33m- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+[0m[33m- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+[0m[33m- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+[0m[33m
+[0m[33mImportant:
+[0m[33m
+[0m[33m- Do not use prompt length as the main indicator of complexity.
+[0m[33m- Technical terminology alone does not make a prompt difficult.
+[0m[33m- A long prompt can be trivial.
+[0m[33m- A short prompt can be very difficult.
+[0m[33m
+[0m[33mReturn JSON only:
+[0m[33m{"complexity": 0.50}
+[0m[33m
+[0m[33mDo not include explanations, Markdown, or additional properties.
+[0m[33m<|im_end|>
+[0m[33m<|im_start|>user
+[0m[33mPlan three dinners using these options: bean tacos cost $6 and take 20 minutes; lentil soup costs $5 and takes 40 minutes; vegetable pasta costs $7 and takes 25 minutes; egg fried rice costs $4 and takes 15 minutes. Use three different dishes, spend at most $18, and keep every dinner under 30 minutes.<|im_end|>
+[0m[33m<|im_start|>assistant
+[0m[32m<think>
+[0m[32m
+[0m[32m</think>
+[0m[32m
+[0m[32m{"complexity":0.50}<|im_end|>[0m
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_smoke_50/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+[3m              Step 16              [0m
+┏━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃[1;35m [0m[1;35mMetric              [0m[1;35m [0m┃[1;35m [0m[1;35mValue   [0m[1;35m [0m┃
+┡━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│[36m [0m[36mepoch               [0m[36m [0m│[32m [0m[32m2       [0m[32m [0m│
+│[36m [0m[36mlearning_rate       [0m[36m [0m│[32m [0m[32m0.000011[0m[32m [0m│
+│[36m [0m[36mnum_loss_tokens     [0m[36m [0m│[32m [0m[32m8.000000[0m[32m [0m│
+│[36m [0m[36mnum_sequences       [0m[36m [0m│[32m [0m[32m8       [0m[32m [0m│
+│[36m [0m[36mnum_tokens          [0m[36m [0m│[32m [0m[32m2606    [0m[32m [0m│
+│[36m [0m[36mprogress            [0m[36m [0m│[32m [0m[32m0.944444[0m[32m [0m│
+│[36m [0m[36mtime/finish_batch   [0m[36m [0m│[32m [0m[32m1.734640[0m[32m [0m│
+│[36m [0m[36mtime/get_batch      [0m[36m [0m│[32m [0m[32m0.037633[0m[32m [0m│
+│[36m [0m[36mtime/step           [0m[36m [0m│[32m [0m[32m1.732300[0m[32m [0m│
+│[36m [0m[36mtime/submit_batch   [0m[36m [0m│[32m [0m[32m0.038675[0m[32m [0m│
+│[36m [0m[36mtrain_mean_bpb      [0m[36m [0m│[32m [0m[32m0.020696[0m[32m [0m│
+│[36m [0m[36mtrain_mean_nll      [0m[36m [0m│[32m [0m[32m0.038937[0m[32m [0m│
+└──────────────────────┴──────────┘
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_smoke_50/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+[3m              Step 17              [0m
+┏━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃[1;35m [0m[1;35mMetric              [0m[1;35m [0m┃[1;35m [0m[1;35mValue   [0m[1;35m [0m┃
+┡━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│[36m [0m[36mepoch               [0m[36m [0m│[32m [0m[32m2       [0m[32m [0m│
+│[36m [0m[36mlearning_rate       [0m[36m [0m│[32m [0m[32m0.000006[0m[32m [0m│
+│[36m [0m[36mnum_loss_tokens     [0m[36m [0m│[32m [0m[32m8.000000[0m[32m [0m│
+│[36m [0m[36mnum_sequences       [0m[36m [0m│[32m [0m[32m8       [0m[32m [0m│
+│[36m [0m[36mnum_tokens          [0m[36m [0m│[32m [0m[32m2562    [0m[32m [0m│
+│[36m [0m[36mprogress            [0m[36m [0m│[32m [0m[32m1.000000[0m[32m [0m│
+│[36m [0m[36mtime/finish_batch   [0m[36m [0m│[32m [0m[32m1.565692[0m[32m [0m│
+│[36m [0m[36mtime/get_batch      [0m[36m [0m│[32m [0m[32m0.036662[0m[32m [0m│
+│[36m [0m[36mtime/step           [0m[36m [0m│[32m [0m[32m1.563471[0m[32m [0m│
+│[36m [0m[36mtime/submit_batch   [0m[36m [0m│[32m [0m[32m0.038087[0m[32m [0m│
+│[36m [0m[36mtrain_mean_bpb      [0m[36m [0m│[32m [0m[32m0.008635[0m[32m [0m│
+│[36m [0m[36mtrain_mean_nll      [0m[36m [0m│[32m [0m[32m0.016245[0m[32m [0m│
+└──────────────────────┴──────────┘
+tinker_cookbook.checkpoint_utils:467 [INFO] Saved checkpoints: {'state_path': 'tinker://377ac0e0-e6b9-5d4f-a6d6-919b4a00f472:train:0/weights/final', 'sampler_path': 'tinker://377ac0e0-e6b9-5d4f-a6d6-919b4a00f472:train:0/sampler_weights/final'}
+tinker_cookbook.supervised.train:584 [INFO] Training completed successfully
+tinker_cookbook.checkpoint_utils:399 [INFO] Reading checkpoints from runs\qwen3_8b_smoke_50\checkpoints.jsonl
+tinker_cookbook.checkpoint_utils:421 [INFO] Found 1 valid checkpoints with key 'sampler_path' in runs\qwen3_8b_smoke_50
+tinker_cookbook.checkpoint_utils:424 [INFO] Using last checkpoint: CheckpointRecord(name='final', batch=0, epoch=3, final=None, state_path='tinker://377ac0e0-e6b9-5d4f-a6d6-919b4a00f472:train:0/weights/final', sampler_path='tinker://377ac0e0-e6b9-5d4f-a6d6-919b4a00f472:train:0/sampler_weights/final', extra={'elapsed_tokens': 45774})

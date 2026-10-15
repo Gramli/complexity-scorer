@@ -1,0 +1,4 @@
+root:680 [INFO] Command line invocation: 'src\train_smoke.py'
+tinker_cookbook.utils.ml_log:618 [INFO] Logging to: D:\GitHub\challenges\complexity-scorer\runs\qwen3_8b_smoke_50
+tinker.lib.public_interfaces.service_client:151 [INFO] ServiceClient initialized for session 89268547-ed79-5098-ae7a-4991ac65bd2c
+tinker.lib.public_interfaces.service_client:293 [INFO] TrainingClient initialized for model 89268547-ed79-5098-ae7a-4991ac65bd2c:train:0

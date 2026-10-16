@@ -1,21 +1,47 @@
-# Complexity scorer 500-example fine-tune
+# Complexity scorer 2,500-example fine-tune
 
 Run commands from the repository root in PowerShell. No training has been started
 during implementation.
 
 ## Files
 
-- `src/scorer_config.py` contains the unchanged baseline system prompt and five
-  allowed scores. Both baseline evaluation and training import these settings.
+- `src/scorer_config.py` contains the shared model name, unchanged baseline
+  system prompt, and five allowed scores.
+- `src/json_utils.py` reads JSONL files and rejects duplicate JSON properties.
+  Each script still applies its own rules to the parsed records.
+- `src/scorer_schema.py` validates scores and builds the shared system/user
+  messages, so evaluation and training use the same input format.
 - `src/train_smoke.py` validates the source dataset, generates chat conversations,
   and calls the standard Tinker Cookbook supervised training pipeline.
-- `data/train_500_tinker.jsonl` is generated from `data/train_500.jsonl` after validation.
+- `data/train_tinker.jsonl` is generated from `data/train.jsonl` after validation.
   Every conversation has system, user, and assistant messages. The assistant
   target is only JSON, such as `{"complexity":0.00}`. The `reasoning` field is ignored.
 - `tests/test_train_smoke.py` checks validation and conversion offline, using
   temporary synthetic fixtures rather than either project dataset.
+- `tests/test_data_contracts.py` checks prediction parsing and the differences
+  between training and evaluation dataset rules.
+- `tests/test_shared_helpers.py` checks file cleanup and independent message lists.
 
-The source training dataset must contain exactly 500 nonempty prompts, 100 for each
+### Reading the Python code as a .NET developer
+
+The shared files are Python modules: they group related functions, much like
+static helper classes in C#. No instances or inheritance are needed here.
+
+- `with` closes resources when a block exits, like C# `using`.
+- `yield` returns one item at a time, like C# `yield return`. The JSONL reader
+  only parses the next line when requested. `closing()` ensures an early stop
+  also closes its file, including evaluation with `--limit`.
+- `dict` is a dictionary. Chat messages use string keys such as `role` and `content`.
+- `None` represents no value. A return type of `float | None` means a score or
+  no valid prediction; the type annotation itself does not validate the input.
+- `is_valid_complexity()` performs the actual score validation. Python treats
+  booleans as integers, so the function explicitly rejects them.
+
+Data flows from the shared JSONL reader into each script's validation, then into
+evaluation or training. File-format parsing is shared; training-only checks such
+as class balance and held-out separation remain in `train_smoke.py`.
+
+The source training dataset must contain exactly 2,500 nonempty prompts, 500 for each
 allowed score. Labels must be numbers; optional `level` values must match them.
 Duplicate prompts and prompts shared with `data/eval.jsonl` cause an abort before
 conversion or training. The comparison ignores leading/trailing whitespace;
@@ -23,9 +49,11 @@ the original prompt text is preserved in the generated conversations.
 
 ## Environment prerequisites
 
-`data/train_500.jsonl` contains the 500 training examples used by this script.
-The earlier 50-example source and `data/train_tinker.jsonl` remain as previous
-smoke-run artifacts. Keep the evaluation examples in `data/eval.jsonl` held out.
+`data/train.jsonl` contains the 2,500 training examples used by this script: the
+existing 500 examples plus 2,000 additions. The 500-example files remain available
+as `data/train_500.jsonl` and `data/train_500_tinker.jsonl`. The original 50-example
+files are preserved as `data/train_50_original.jsonl` and
+`data/train_50_original_tinker.jsonl`. Keep `data/eval.jsonl` held out.
 
 Install the stable Cookbook package recommended by the
 [official installation guide](https://tinker-docs.thinkingmachines.ai/cookbook/quickstart/#installation),
@@ -84,7 +112,7 @@ the Cookbook installation is resolved.
 .\.venv\Scripts\python.exe src\train_smoke.py --prepare-only
 ```
 
-This checks both input files, writes `data/train_500_tinker.jsonl`, and prints the
+This checks both input files, writes `data/train_tinker.jsonl`, and prints the
 training configuration. It makes no Tinker service calls and does not load a
 tokenizer.
 
@@ -100,7 +128,7 @@ This always repeats validation and conversation generation before training:
 | --- | --- |
 | Base model / tokenizer | `Qwen/Qwen3-8B` |
 | Renderer | `qwen3` |
-| Batch size | 8 |
+| Batch size | 16 |
 | Maximum sequence length | 4096 |
 | Learning rate | `1e-4` (Cookbook's default linear schedule) |
 | LoRA rank | 32 |
@@ -109,11 +137,11 @@ This always repeats validation and conversation generation before training:
 | Periodic evaluation / checkpoints | Disabled |
 | Loss targets | Last assistant message only |
 
-The standard Cookbook dataset uses complete batches: with 500 records and batch
-size 8, there are 62 batches per epoch, for 62 optimizer steps. It reshuffles each
+The standard Cookbook dataset uses complete batches: with 2,500 records and batch
+size 16, there are 156 batches per epoch, for 156 optimizer steps. It reshuffles each
 epoch and omits the last four records in that epoch.
 
-All training logs go to `runs/qwen3_8b_train_500_epoch1/`. Cookbook saves its final training
+All training logs go to `runs/qwen3_8b_train_2500_epoch1/`. Cookbook saves its final training
 state and sampler checkpoint automatically, even with periodic saves disabled.
 After completion the script prints the log directory and reads the final sampler
 path using the public `checkpoint_utils.get_last_checkpoint` helper. Checkpoints

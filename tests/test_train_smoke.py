@@ -18,9 +18,9 @@ class TrainingDataTests(unittest.TestCase):
         self.temp_directory = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp_directory.cleanup)
         directory = Path(self.temp_directory.name)
-        self.train_path = directory / "train_500.jsonl"
+        self.train_path = directory / "train.jsonl"
         self.eval_path = directory / "eval.jsonl"
-        self.output_path = directory / "train_500_tinker.jsonl"
+        self.output_path = directory / "train_tinker.jsonl"
         self.records = [
             {
                 "prompt": f"Training prompt {level}-{index}: Czech č, quote \" and newline\n",
@@ -29,7 +29,7 @@ class TrainingDataTests(unittest.TestCase):
                 "reasoning": "PRIVATE_REASONING_MUST_NOT_APPEAR",
             }
             for level, score in enumerate(COMPLEXITY_VALUES)
-            for index in range(100)
+            for index in range(500)
         ]
         self.save_records(self.train_path, self.records)
         self.save_records(self.eval_path, [{"prompt": "Held-out prompt"}])
@@ -50,7 +50,7 @@ class TrainingDataTests(unittest.TestCase):
         output = self.output_path.read_text(encoding="utf-8")
         self.assertNotIn("PRIVATE_REASONING_MUST_NOT_APPEAR", output)
         conversations = [json.loads(line) for line in output.splitlines()]
-        self.assertEqual(len(conversations), 500)
+        self.assertEqual(len(conversations), 2500)
         for record, conversation in zip(self.records, conversations):
             self.assertEqual(set(conversation), {"messages"})
             system, user, assistant = conversation["messages"]
@@ -66,13 +66,13 @@ class TrainingDataTests(unittest.TestCase):
 
     def test_wrong_example_count_is_rejected(self) -> None:
         self.save_records(self.train_path, self.records[:-1])
-        with self.assertRaisesRegex(ValueError, "Expected 500"):
+        with self.assertRaisesRegex(ValueError, "Expected 2500"):
             self.validate()
 
     def test_unbalanced_classes_are_rejected(self) -> None:
         self.records[0].update(complexity=0.25, level=1)
         self.save_records(self.train_path, self.records)
-        with self.assertRaisesRegex(ValueError, "100 examples per class"):
+        with self.assertRaisesRegex(ValueError, "500 examples per class"):
             self.validate()
 
     def test_invalid_scores_are_rejected(self) -> None:

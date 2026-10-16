@@ -1,5 +1,7 @@
 """Classification settings shared by baseline evaluation and fine-tuning."""
 
+# Training and evaluation must use the same base model for a fair comparison.
+MODEL_NAME = "Qwen/Qwen3-8B"
 COMPLEXITY_VALUES = (0.00, 0.25, 0.50, 0.75, 1.00)
 
 SYSTEM_PROMPT = """You are a prompt complexity classifier.

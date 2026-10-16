@@ -1,0 +1,200 @@
+{"prompt":"Extract the invoice ID from the supplied note.","complexity":0,"level":0,"reasoning":"Deterministic extraction or formatting."}
+{"prompt":"Sort the supplied invoice entries alphabetically.","complexity":0,"level":0,"reasoning":"Deterministic extraction or formatting."}
+{"prompt":"Format the invoice amounts as currency.","complexity":0,"level":0,"reasoning":"Deterministic extraction or formatting."}
+{"prompt":"Count the invoice records in the provided list.","complexity":0,"level":0,"reasoning":"Deterministic extraction or formatting."}
+{"prompt":"Convert the invoice date to Month Day, Year.","complexity":0,"level":0,"reasoning":"Deterministic extraction or formatting."}
+{"prompt":"Extract the expense report ID from the supplied note.","complexity":0,"level":0,"reasoning":"Deterministic extraction or formatting."}
+{"prompt":"Sort the supplied expense report entries alphabetically.","complexity":0,"level":0,"reasoning":"Deterministic extraction or formatting."}
+{"prompt":"Format the expense report amounts as currency.","complexity":0,"level":0,"reasoning":"Deterministic extraction or formatting."}
+{"prompt":"Count the expense report records in the provided list.","complexity":0,"level":0,"reasoning":"Deterministic extraction or formatting."}
+{"prompt":"Convert the expense report date to Month Day, Year.","complexity":0,"level":0,"reasoning":"Deterministic extraction or formatting."}
+{"prompt":"Extract the sales lead ID from the supplied note.","complexity":0,"level":0,"reasoning":"Deterministic extraction or formatting."}
+{"prompt":"Sort the supplied sales lead entries alphabetically.","complexity":0,"level":0,"reasoning":"Deterministic extraction or formatting."}
+{"prompt":"Format the sales lead amounts as currency.","complexity":0,"level":0,"reasoning":"Deterministic extraction or formatting."}
+{"prompt":"Count the sales lead records in the provided list.","complexity":0,"level":0,"reasoning":"Deterministic extraction or formatting."}
+{"prompt":"Convert the sales lead date to Month Day, Year.","complexity":0,"level":0,"reasoning":"Deterministic extraction or formatting."}
+{"prompt":"Extract the customer refund ID from the supplied note.","complexity":0,"level":0,"reasoning":"Deterministic extraction or formatting."}
+{"prompt":"Sort the supplied customer refund entries alphabetically.","complexity":0,"level":0,"reasoning":"Deterministic extraction or formatting."}
+{"prompt":"Format the customer refund amounts as currency.","complexity":0,"level":0,"reasoning":"Deterministic extraction or formatting."}
+{"prompt":"Count the customer refund records in the provided list.","complexity":0,"level":0,"reasoning":"Deterministic extraction or formatting."}
+{"prompt":"Convert the customer refund date to Month Day, Year.","complexity":0,"level":0,"reasoning":"Deterministic extraction or formatting."}
+{"prompt":"Extract the vendor quote ID from the supplied note.","complexity":0,"level":0,"reasoning":"Deterministic extraction or formatting."}
+{"prompt":"Sort the supplied vendor quote entries alphabetically.","complexity":0,"level":0,"reasoning":"Deterministic extraction or formatting."}
+{"prompt":"Format the vendor quote amounts as currency.","complexity":0,"level":0,"reasoning":"Deterministic extraction or formatting."}
+{"prompt":"Count the vendor quote records in the provided list.","complexity":0,"level":0,"reasoning":"Deterministic extraction or formatting."}
+{"prompt":"Convert the vendor quote date to Month Day, Year.","complexity":0,"level":0,"reasoning":"Deterministic extraction or formatting."}
+{"prompt":"Extract the support ticket ID from the supplied note.","complexity":0,"level":0,"reasoning":"Deterministic extraction or formatting."}
+{"prompt":"Sort the supplied support ticket entries alphabetically.","complexity":0,"level":0,"reasoning":"Deterministic extraction or formatting."}
+{"prompt":"Format the support ticket amounts as currency.","complexity":0,"level":0,"reasoning":"Deterministic extraction or formatting."}
+{"prompt":"Count the support ticket records in the provided list.","complexity":0,"level":0,"reasoning":"Deterministic extraction or formatting."}
+{"prompt":"Convert the support ticket date to Month Day, Year.","complexity":0,"level":0,"reasoning":"Deterministic extraction or formatting."}
+{"prompt":"Extract the renewal account ID from the supplied note.","complexity":0,"level":0,"reasoning":"Deterministic extraction or formatting."}
+{"prompt":"Sort the supplied renewal account entries alphabetically.","complexity":0,"level":0,"reasoning":"Deterministic extraction or formatting."}
+{"prompt":"Format the renewal account amounts as currency.","complexity":0,"level":0,"reasoning":"Deterministic extraction or formatting."}
+{"prompt":"Count the renewal account records in the provided list.","complexity":0,"level":0,"reasoning":"Deterministic extraction or formatting."}
+{"prompt":"Convert the renewal account date to Month Day, Year.","complexity":0,"level":0,"reasoning":"Deterministic extraction or formatting."}
+{"prompt":"Extract the cash forecast ID from the supplied note.","complexity":0,"level":0,"reasoning":"Deterministic extraction or formatting."}
+{"prompt":"Sort the supplied cash forecast entries alphabetically.","complexity":0,"level":0,"reasoning":"Deterministic extraction or formatting."}
+{"prompt":"Format the cash forecast amounts as currency.","complexity":0,"level":0,"reasoning":"Deterministic extraction or formatting."}
+{"prompt":"Count the cash forecast records in the provided list.","complexity":0,"level":0,"reasoning":"Deterministic extraction or formatting."}
+{"prompt":"Convert the cash forecast date to Month Day, Year.","complexity":0,"level":0,"reasoning":"Deterministic extraction or formatting."}
+{"prompt":"Calculate the discount on a $240 vendor order at 5%.","complexity":0.25,"level":1,"reasoning":"A familiar calculation or limited interpretation is needed."}
+{"prompt":"Write a polite reply acknowledging a delayed shipment complaint.","complexity":0.25,"level":1,"reasoning":"A familiar calculation or limited interpretation is needed."}
+{"prompt":"Find the weekly average from 12, 18, and 21 sales.","complexity":0.25,"level":1,"reasoning":"A familiar calculation or limited interpretation is needed."}
+{"prompt":"Explain net 30 payment terms in plain language.","complexity":0.25,"level":1,"reasoning":"A familiar calculation or limited interpretation is needed."}
+{"prompt":"A rep closes 6 of 24 leads; find the conversion rate.","complexity":0.25,"level":1,"reasoning":"A familiar calculation or limited interpretation is needed."}
+{"prompt":"Draft a follow-up after a customer misses a scheduled demo.","complexity":0.25,"level":1,"reasoning":"A familiar calculation or limited interpretation is needed."}
+{"prompt":"Subtract $85 in credits from a $940 invoice.","complexity":0.25,"level":1,"reasoning":"A familiar calculation or limited interpretation is needed."}
+{"prompt":"Summarize these meeting notes as three action items.","complexity":0.25,"level":1,"reasoning":"A familiar calculation or limited interpretation is needed."}
+{"prompt":"A customer reports duplicate billing; ask for charge dates.","complexity":0.25,"level":1,"reasoning":"A familiar calculation or limited interpretation is needed."}
+{"prompt":"Compute remaining budget from $1,200 allocated and $875 spent.","complexity":0.25,"level":1,"reasoning":"A familiar calculation or limited interpretation is needed."}
+{"prompt":"Write a brief payment reminder for an overdue invoice.","complexity":0.25,"level":1,"reasoning":"A familiar calculation or limited interpretation is needed."}
+{"prompt":"Convert 3.5 staff hours into minutes.","complexity":0.25,"level":1,"reasoning":"A familiar calculation or limited interpretation is needed."}
+{"prompt":"Explain gross versus net sales in two sentences.","complexity":0.25,"level":1,"reasoning":"A familiar calculation or limited interpretation is needed."}
+{"prompt":"A team resolved 45 of 60 tickets; calculate completion rate.","complexity":0.25,"level":1,"reasoning":"A familiar calculation or limited interpretation is needed."}
+{"prompt":"Draft a thank-you note after a first-round interview.","complexity":0.25,"level":1,"reasoning":"A familiar calculation or limited interpretation is needed."}
+{"prompt":"Compare unit revenue for 20 items sold at $15 each.","complexity":0.25,"level":1,"reasoning":"A familiar calculation or limited interpretation is needed."}
+{"prompt":"Turn these notes into a concise sales handoff: need, budget, next step.","complexity":0.25,"level":1,"reasoning":"A familiar calculation or limited interpretation is needed."}
+{"prompt":"Write a clear subject line for a revised quote.","complexity":0.25,"level":1,"reasoning":"A familiar calculation or limited interpretation is needed."}
+{"prompt":"Calculate the increase from $7,500 to $8,100 as a percentage.","complexity":0.25,"level":1,"reasoning":"A familiar calculation or limited interpretation is needed."}
+{"prompt":"A customer asks to update their billing contact; request confirmation.","complexity":0.25,"level":1,"reasoning":"A familiar calculation or limited interpretation is needed."}
+{"prompt":"Split a $144 travel bill across three employees.","complexity":0.25,"level":1,"reasoning":"A familiar calculation or limited interpretation is needed."}
+{"prompt":"Group listed issues into billing and delivery categories.","complexity":0.25,"level":1,"reasoning":"A familiar calculation or limited interpretation is needed."}
+{"prompt":"Summarize a short customer review preserving praise and concern.","complexity":0.25,"level":1,"reasoning":"A familiar calculation or limited interpretation is needed."}
+{"prompt":"A quote expires in 10 days; explain this clearly.","complexity":0.25,"level":1,"reasoning":"A familiar calculation or limited interpretation is needed."}
+{"prompt":"Calculate total spend for five $18 parking charges.","complexity":0.25,"level":1,"reasoning":"A familiar calculation or limited interpretation is needed."}
+{"prompt":"Draft a neutral response to a customer asking for a refund decision.","complexity":0.25,"level":1,"reasoning":"A familiar calculation or limited interpretation is needed."}
+{"prompt":"Find the remaining balance after a $125 payment on $460.","complexity":0.25,"level":1,"reasoning":"A familiar calculation or limited interpretation is needed."}
+{"prompt":"Write a short agenda for a 20-minute weekly team meeting.","complexity":0.25,"level":1,"reasoning":"A familiar calculation or limited interpretation is needed."}
+{"prompt":"A store sold 32 units at $9 each; calculate gross revenue.","complexity":0.25,"level":1,"reasoning":"A familiar calculation or limited interpretation is needed."}
+{"prompt":"Rewrite a policy sentence in plain language without changing meaning.","complexity":0.25,"level":1,"reasoning":"A familiar calculation or limited interpretation is needed."}
+{"prompt":"Draft a polite request for a manager to approve travel expenses.","complexity":0.25,"level":1,"reasoning":"A familiar calculation or limited interpretation is needed."}
+{"prompt":"Find what fraction of 50 accounts renewed if 40 did.","complexity":0.25,"level":1,"reasoning":"A familiar calculation or limited interpretation is needed."}
+{"prompt":"Suggest two basic steps for a failed discount code.","complexity":0.25,"level":1,"reasoning":"A familiar calculation or limited interpretation is needed."}
+{"prompt":"Summarize status: hiring on track, launch delayed, budget stable.","complexity":0.25,"level":1,"reasoning":"A familiar calculation or limited interpretation is needed."}
+{"prompt":"Calculate 15% of a $200 service fee.","complexity":0.25,"level":1,"reasoning":"A familiar calculation or limited interpretation is needed."}
+{"prompt":"A lead has not replied after a demo; draft a friendly check-in.","complexity":0.25,"level":1,"reasoning":"A familiar calculation or limited interpretation is needed."}
+{"prompt":"Write a brief acknowledgment of a received support case.","complexity":0.25,"level":1,"reasoning":"A familiar calculation or limited interpretation is needed."}
+{"prompt":"Find the difference between planned $4,000 and actual $3,650 spend.","complexity":0.25,"level":1,"reasoning":"A familiar calculation or limited interpretation is needed."}
+{"prompt":"Turn a vague “circle back soon” into a clear business sentence.","complexity":0.25,"level":1,"reasoning":"A familiar calculation or limited interpretation is needed."}
+{"prompt":"A customer says a parcel is late; apologize and offer to check tracking.","complexity":0.25,"level":1,"reasoning":"A familiar calculation or limited interpretation is needed."}
+{"prompt":"Compare two staffing plans by agent-hours and note why coverage timing still matters.","complexity":0.5,"level":2,"reasoning":"Several business facts or constraints must be combined."}
+{"prompt":"Estimate renewals from an 84% rate across 750 accounts; state one forecast caveat.","complexity":0.5,"level":2,"reasoning":"Several business facts or constraints must be combined."}
+{"prompt":"Draft a price-match reply that preserves goodwill but does not promise an exception.","complexity":0.5,"level":2,"reasoning":"Several business facts or constraints must be combined."}
+{"prompt":"A cost center is 10% over budget midyear; outline checks before recommending cuts.","complexity":0.5,"level":2,"reasoning":"Several business facts or constraints must be combined."}
+{"prompt":"Interpret revenue growth with falling unit volume and rising average deal size; name a limitation.","complexity":0.5,"level":2,"reasoning":"Several business facts or constraints must be combined."}
+{"prompt":"A support queue peaks Monday and Friday; suggest staffing analysis without assuming other days are equal.","complexity":0.5,"level":2,"reasoning":"Several business facts or constraints must be combined."}
+{"prompt":"Build a vendor scorecard using price, delivery reliability, and support quality.","complexity":0.5,"level":2,"reasoning":"Several business facts or constraints must be combined."}
+{"prompt":"Calculate weighted pipeline and explain why it is not committed revenue.","complexity":0.5,"level":2,"reasoning":"Several business facts or constraints must be combined."}
+{"prompt":"Respond to a refund request after substantial subscription use while gathering facts and avoiding promises.","complexity":0.5,"level":2,"reasoning":"Several business facts or constraints must be combined."}
+{"prompt":"Reduce an 8-hour weekly meeting load by 25%; give new total and a practical change.","complexity":0.5,"level":2,"reasoning":"Several business facts or constraints must be combined."}
+{"prompt":"Handle time and satisfaction both declined; list checks before changing agent targets.","complexity":0.5,"level":2,"reasoning":"Several business facts or constraints must be combined."}
+{"prompt":"Revenue rose while gross margin fell; identify plausible causes and evidence to check.","complexity":0.5,"level":2,"reasoning":"Several business facts or constraints must be combined."}
+{"prompt":"Create escalation criteria for repeat failures, late delivery, and billing disputes.","complexity":0.5,"level":2,"reasoning":"Several business facts or constraints must be combined."}
+{"prompt":"Allocate a training budget fairly when two teams need twice the hours of others.","complexity":0.5,"level":2,"reasoning":"Several business facts or constraints must be combined."}
+{"prompt":"Write a sales handoff distinguishing confirmed facts from pending security review.","complexity":0.5,"level":2,"reasoning":"Several business facts or constraints must be combined."}
+{"prompt":"Explain why a list-price increase may not produce an equal net-revenue increase.","complexity":0.5,"level":2,"reasoning":"Several business facts or constraints must be combined."}
+{"prompt":"Returns rose after packaging changed; propose an investigation that avoids assuming causation.","complexity":0.5,"level":2,"reasoning":"Several business facts or constraints must be combined."}
+{"prompt":"Prioritize overdue invoices using balance, age, and customer history.","complexity":0.5,"level":2,"reasoning":"Several business facts or constraints must be combined."}
+{"prompt":"Choose a decision framework for two candidates with different start dates and experience.","complexity":0.5,"level":2,"reasoning":"Several business facts or constraints must be combined."}
+{"prompt":"Summarize a customer complaint as issue, impact, remedy requested, and owner.","complexity":0.5,"level":2,"reasoning":"Several business facts or constraints must be combined."}
+{"prompt":"Compare promotion sales with normal sales using given price and volume figures.","complexity":0.5,"level":2,"reasoning":"Several business facts or constraints must be combined."}
+{"prompt":"Design a consistent manager review process for reimbursement exceptions.","complexity":0.5,"level":2,"reasoning":"Several business facts or constraints must be combined."}
+{"prompt":"Protect urgent support while some staff attend training; propose coverage steps.","complexity":0.5,"level":2,"reasoning":"Several business facts or constraints must be combined."}
+{"prompt":"Score renewal risk using usage decline, unresolved cases, and renewal date; include caveat.","complexity":0.5,"level":2,"reasoning":"Several business facts or constraints must be combined."}
+{"prompt":"Summarize a forecast separating confirmed deals from rep estimates.","complexity":0.5,"level":2,"reasoning":"Several business facts or constraints must be combined."}
+{"prompt":"Assess a supplier discount requiring a larger minimum order.","complexity":0.5,"level":2,"reasoning":"Several business facts or constraints must be combined."}
+{"prompt":"Write a factual internal update on a launch delay, impact, and owners.","complexity":0.5,"level":2,"reasoning":"Several business facts or constraints must be combined."}
+{"prompt":"Estimate support time from ticket volume and handling duration; discuss automation tradeoff.","complexity":0.5,"level":2,"reasoning":"Several business facts or constraints must be combined."}
+{"prompt":"Plan a quarterly business review agenda covering results, risks, and decisions.","complexity":0.5,"level":2,"reasoning":"Several business facts or constraints must be combined."}
+{"prompt":"Calculate quota gap from attainment and suggest diagnostic questions.","complexity":0.5,"level":2,"reasoning":"Several business facts or constraints must be combined."}
+{"prompt":"Compare early-payment discount and standard terms; list missing decision facts.","complexity":0.5,"level":2,"reasoning":"Several business facts or constraints must be combined."}
+{"prompt":"Draft recovery for a customer who received conflicting answers and add prevention step.","complexity":0.5,"level":2,"reasoning":"Several business facts or constraints must be combined."}
+{"prompt":"Explain what meeting response-time goals but missing resolution goals may indicate.","complexity":0.5,"level":2,"reasoning":"Several business facts or constraints must be combined."}
+{"prompt":"Distribute high-value leads among reps with differing workloads and conversion histories.","complexity":0.5,"level":2,"reasoning":"Several business facts or constraints must be combined."}
+{"prompt":"Plan analysis before merging support queues across skills, service levels, and transition risk.","complexity":0.5,"level":2,"reasoning":"Several business facts or constraints must be combined."}
+{"prompt":"Prepare a one-on-one template covering progress, blockers, workload, and development.","complexity":0.5,"level":2,"reasoning":"Several business facts or constraints must be combined."}
+{"prompt":"Sales are stable but collections slow; identify reports and likely causes to investigate.","complexity":0.5,"level":2,"reasoning":"Several business facts or constraints must be combined."}
+{"prompt":"Compare branches with conflicting sales productivity and customer-rating outcomes.","complexity":0.5,"level":2,"reasoning":"Several business facts or constraints must be combined."}
+{"prompt":"Respond to a request for a policy exception that could set precedent.","complexity":0.5,"level":2,"reasoning":"Several business facts or constraints must be combined."}
+{"prompt":"Prepare a short cash collection plan using invoice ages and account balances.","complexity":0.5,"level":2,"reasoning":"Several business facts or constraints must be combined."}
+{"prompt":"Cut costs 12% without harming retention or fraud controls; stage reversible savings, impact measures, and stop conditions.","complexity":0.75,"level":3,"reasoning":"Requires structured tradeoff analysis and practical safeguards."}
+{"prompt":"Calibrate a forecast whose error varies by region and deal size; communicate an uncertainty range to executives.","complexity":0.75,"level":3,"reasoning":"Requires structured tradeoff analysis and practical safeguards."}
+{"prompt":"Compare automation and weekend staffing through a pilot measuring cost, resolution, satisfaction, and fairness.","complexity":0.75,"level":3,"reasoning":"Requires structured tradeoff analysis and practical safeguards."}
+{"prompt":"Analyze a cash shortfall with a near-term covenant test and potentially refundable customer deposits; sequence decisions and reviews.","complexity":0.75,"level":3,"reasoning":"Requires structured tradeoff analysis and practical safeguards."}
+{"prompt":"A price rise improved margin but reduced conversion while discounts vary by rep; estimate sensitivity and redesign discount governance.","complexity":0.75,"level":3,"reasoning":"Requires structured tradeoff analysis and practical safeguards."}
+{"prompt":"Merge teams with different compensation and queue rules; plan a 90-day integration that protects service and tests changes.","complexity":0.75,"level":3,"reasoning":"Requires structured tradeoff analysis and practical safeguards."}
+{"prompt":"Evaluate whether a new incentive plan caused growth when territories and product mix also changed.","complexity":0.75,"level":3,"reasoning":"Requires structured tradeoff analysis and practical safeguards."}
+{"prompt":"Resolve regional inventory excess and stockouts under constrained cash; balance transfers, replenishment, and markdowns.","complexity":0.75,"level":3,"reasoning":"Requires structured tradeoff analysis and practical safeguards."}
+{"prompt":"Prepare a negotiation strategy for a strategic customer threatening churn after an outage and seeking credit plus price protection.","complexity":0.75,"level":3,"reasoning":"Requires structured tradeoff analysis and practical safeguards."}
+{"prompt":"Design a support dashboard that accounts for case complexity and quality tradeoffs, with guardrails against gaming.","complexity":0.75,"level":3,"reasoning":"Requires structured tradeoff analysis and practical safeguards."}
+{"prompt":"Diagnose declining cash conversion despite strong profit and prioritize receivables, inventory, payables, and noncash checks.","complexity":0.75,"level":3,"reasoning":"Requires structured tradeoff analysis and practical safeguards."}
+{"prompt":"Assess collections outsourcing across cost, recovery, customer experience, data handling, and reversibility; propose a pilot.","complexity":0.75,"level":3,"reasoning":"Requires structured tradeoff analysis and practical safeguards."}
+{"prompt":"Distinguish sales weakness from implementation bottlenecks when bookings rise but recognized revenue misses plan.","complexity":0.75,"level":3,"reasoning":"Requires structured tradeoff analysis and practical safeguards."}
+{"prompt":"Create performance review calibration for managers with different territories, staffing, tenure, and customer complexity.","complexity":0.75,"level":3,"reasoning":"Requires structured tradeoff analysis and practical safeguards."}
+{"prompt":"Model closing a service center, including transition cost, access, workforce impact, and demand uncertainty.","complexity":0.75,"level":3,"reasoning":"Requires structured tradeoff analysis and practical safeguards."}
+{"prompt":"Diagnose growing ticket backlog despite planned hiring by separating arrival rate, productivity, training, and case mix.","complexity":0.75,"level":3,"reasoning":"Requires structured tradeoff analysis and practical safeguards."}
+{"prompt":"Create a principled exception process for a strategic low-margin account under a new margin floor.","complexity":0.75,"level":3,"reasoning":"Requires structured tradeoff analysis and practical safeguards."}
+{"prompt":"Compare flexible expensive debt with cheaper covenant-heavy financing through downside scenarios.","complexity":0.75,"level":3,"reasoning":"Requires structured tradeoff analysis and practical safeguards."}
+{"prompt":"Standardize pipeline qualification across regions while preserving historical trend comparisons.","complexity":0.75,"level":3,"reasoning":"Requires structured tradeoff analysis and practical safeguards."}
+{"prompt":"Compare managers despite differences in cycle length and support burden; explain limits of normalization.","complexity":0.75,"level":3,"reasoning":"Requires structured tradeoff analysis and practical safeguards."}
+{"prompt":"Test whether a rebate creates incremental profitable sales rather than subsidizing existing demand.","complexity":0.75,"level":3,"reasoning":"Requires structured tradeoff analysis and practical safeguards."}
+{"prompt":"Coordinate business response to customer-data exposure while support demand spikes, aligning communication and operations.","complexity":0.75,"level":3,"reasoning":"Requires structured tradeoff analysis and practical safeguards."}
+{"prompt":"Set urgent refund authority tiers that control abuse while enabling service recovery.","complexity":0.75,"level":3,"reasoning":"Requires structured tradeoff analysis and practical safeguards."}
+{"prompt":"Redesign sales incentives when bookings targets contribute to delivery delays and cancellations.","complexity":0.75,"level":3,"reasoning":"Requires structured tradeoff analysis and practical safeguards."}
+{"prompt":"Test a four-day support schedule across coverage, service outcomes, employee impact, and seasonal variation.","complexity":0.75,"level":3,"reasoning":"Requires structured tradeoff analysis and practical safeguards."}
+{"prompt":"Communicate a forecast dominated by a repeatedly delayed large deal; include commitments and contingency actions.","complexity":0.75,"level":3,"reasoning":"Requires structured tradeoff analysis and practical safeguards."}
+{"prompt":"Allocate shared support costs and customer revenue between units while limiting manipulation incentives.","complexity":0.75,"level":3,"reasoning":"Requires structured tradeoff analysis and practical safeguards."}
+{"prompt":"Sequence restructuring to capture savings while retaining knowledge and maintaining continuity.","complexity":0.75,"level":3,"reasoning":"Requires structured tradeoff analysis and practical safeguards."}
+{"prompt":"Set differentiated credit terms for a valuable customer with recurring seasonal payment delays.","complexity":0.75,"level":3,"reasoning":"Requires structured tradeoff analysis and practical safeguards."}
+{"prompt":"Diligence recurring revenue containing prepayments, overages, and staggered discounts to estimate durability.","complexity":0.75,"level":3,"reasoning":"Requires structured tradeoff analysis and practical safeguards."}
+{"prompt":"Evaluate team targets versus individual goals, including free riding, collaboration, accountability, and a test plan.","complexity":0.75,"level":3,"reasoning":"Requires structured tradeoff analysis and practical safeguards."}
+{"prompt":"Investigate engagement and complaint changes across managers without assuming a causal link.","complexity":0.75,"level":3,"reasoning":"Requires structured tradeoff analysis and practical safeguards."}
+{"prompt":"Allocate scarce capital among mandatory remediation, capacity, and retention with uncertain returns.","complexity":0.75,"level":3,"reasoning":"Requires structured tradeoff analysis and practical safeguards."}
+{"prompt":"Evaluate a discretionary refund policy with divergent effects on cost, repeat contact, and segment satisfaction.","complexity":0.75,"level":3,"reasoning":"Requires structured tradeoff analysis and practical safeguards."}
+{"prompt":"Redesign the month-end close when sales, billing, and finance records disagree.","complexity":0.75,"level":3,"reasoning":"Requires structured tradeoff analysis and practical safeguards."}
+{"prompt":"Test account pruning while measuring cost-to-serve, referral value, and future growth potential.","complexity":0.75,"level":3,"reasoning":"Requires structured tradeoff analysis and practical safeguards."}
+{"prompt":"Govern a global service promise with local legal, language, and time-zone variation.","complexity":0.75,"level":3,"reasoning":"Requires structured tradeoff analysis and practical safeguards."}
+{"prompt":"Compare rapid cost cuts that risk capacity with slower uncertain savings for board review.","complexity":0.75,"level":3,"reasoning":"Requires structured tradeoff analysis and practical safeguards."}
+{"prompt":"Assess a loyalty program with high enrollment but unclear incremental profit and outstanding reward liabilities.","complexity":0.75,"level":3,"reasoning":"Requires structured tradeoff analysis and practical safeguards."}
+{"prompt":"Design performance pay for variable case difficulty without encouraging cherry-picking or premature closure.","complexity":0.75,"level":3,"reasoning":"Requires structured tradeoff analysis and practical safeguards."}
+{"prompt":"Cut operating expense 12% without raising churn or weakening fraud controls; stage reversible savings, model customer impact, set stop conditions.","complexity":1,"level":4,"reasoning":"Requires integrated systems reasoning and careful uncertainty management."}
+{"prompt":"A $4.8M forecast has errors by region and deal size; calibrate a range and explain uncertainty.","complexity":1,"level":4,"reasoning":"Requires integrated systems reasoning and careful uncertainty management."}
+{"prompt":"Compare password-reset automation with weekend staffing in a test of cost, resolution, satisfaction, and equity.","complexity":1,"level":4,"reasoning":"Requires integrated systems reasoning and careful uncertainty management."}
+{"prompt":"Cash shortfall, covenant test in six weeks, possibly refundable deposits: outline analysis and expert-review decisions.","complexity":1,"level":4,"reasoning":"Requires integrated systems reasoning and careful uncertainty management."}
+{"prompt":"Price rise improved margin but reduced conversion; discounts vary by rep. Estimate sensitivity and reset governance.","complexity":1,"level":4,"reasoning":"Requires integrated systems reasoning and careful uncertainty management."}
+{"prompt":"Merge service teams with different pay, queues, metrics; plan 90-day integration protecting continuity.","complexity":1,"level":4,"reasoning":"Requires integrated systems reasoning and careful uncertainty management."}
+{"prompt":"Leader credits incentives for growth while mix and territory changed; design evaluation and explain limits.","complexity":1,"level":4,"reasoning":"Requires integrated systems reasoning and careful uncertainty management."}
+{"prompt":"Inventory excess in some regions, stockouts elsewhere, constrained cash; frame transfer, replenishment, markdown.","complexity":1,"level":4,"reasoning":"Requires integrated systems reasoning and careful uncertainty management."}
+{"prompt":"Major customer threatens departure after outage, requests credit and unchanged-price extension; devise negotiation, approvals, fallbacks.","complexity":1,"level":4,"reasoning":"Requires integrated systems reasoning and careful uncertainty management."}
+{"prompt":"Design support dashboard where speed may hurt quality and complex cases distort averages; metrics and guardrails.","complexity":1,"level":4,"reasoning":"Requires integrated systems reasoning and careful uncertainty management."}
+{"prompt":"Profit is strong but cash conversion declines; diagnose receivables, inventory, payables, noncash items.","complexity":1,"level":4,"reasoning":"Requires integrated systems reasoning and careful uncertainty management."}
+{"prompt":"Evaluate collections outsourcing on cost, recovery, experience, data, reversibility; design pilot.","complexity":1,"level":4,"reasoning":"Requires integrated systems reasoning and careful uncertainty management."}
+{"prompt":"Revenue misses despite record bookings; distinguish sales execution from implementation capacity with evidence.","complexity":1,"level":4,"reasoning":"Requires integrated systems reasoning and careful uncertainty management."}
+{"prompt":"Fair manager reviews across territory potential, tenure, staffing, customer complexity.","complexity":1,"level":4,"reasoning":"Requires integrated systems reasoning and careful uncertainty management."}
+{"prompt":"Evaluate closing one of three centers: costs, customer travel, workforce, demand uncertainty.","complexity":1,"level":4,"reasoning":"Requires integrated systems reasoning and careful uncertainty management."}
+{"prompt":"Support backlog grows despite hiring; diagnose arrivals, productivity, training, case mix.","complexity":1,"level":4,"reasoning":"Requires integrated systems reasoning and careful uncertainty management."}
+{"prompt":"Choose low-margin strategic account versus minimum-margin policy; define consistent exception review.","complexity":1,"level":4,"reasoning":"Requires integrated systems reasoning and careful uncertainty management."}
+{"prompt":"Cheaper restrictive debt versus flexible expensive debt; outline downside-aware decision memo.","complexity":1,"level":4,"reasoning":"Requires integrated systems reasoning and careful uncertainty management."}
+{"prompt":"Global sales pipeline definitions differ; standardize and migrate while preserving comparisons.","complexity":1,"level":4,"reasoning":"Requires integrated systems reasoning and careful uncertainty management."}
+{"prompt":"Rank managers by revenue per head despite cycle and support differences; recommend comparison and limits.","complexity":1,"level":4,"reasoning":"Requires integrated systems reasoning and careful uncertainty management."}
+{"prompt":"Rebate increased volume but may subsidize organic purchases; evaluate with comparison groups and profit.","complexity":1,"level":4,"reasoning":"Requires integrated systems reasoning and careful uncertainty management."}
+{"prompt":"Coordinate response to customer data exposure and support spike across communications, staffing, finance.","complexity":1,"level":4,"reasoning":"Requires integrated systems reasoning and careful uncertainty management."}
+{"prompt":"Create urgent credit policy controlling abuse and empowering frontline service recovery.","complexity":1,"level":4,"reasoning":"Requires integrated systems reasoning and careful uncertainty management."}
+{"prompt":"Bookings incentives coincide with implementation delays and cancellations; align sales, delivery, retention pay.","complexity":1,"level":4,"reasoning":"Requires integrated systems reasoning and careful uncertainty management."}
+{"prompt":"Design four-day support pilot measuring coverage, employee outcomes, customer effect, seasonality.","complexity":1,"level":4,"reasoning":"Requires integrated systems reasoning and careful uncertainty management."}
+{"prompt":"Large deal delayed twice dominates forecast; communicate uncertainty, manage commitments, plan contingencies.","complexity":1,"level":4,"reasoning":"Requires integrated systems reasoning and careful uncertainty management."}
+{"prompt":"Units dispute shared revenue and support costs; allocate fairly and reduce manipulation incentives.","complexity":1,"level":4,"reasoning":"Requires integrated systems reasoning and careful uncertainty management."}
+{"prompt":"Restructuring risks experienced staff leaving before transfer; sequence savings, retention, continuity, communication.","complexity":1,"level":4,"reasoning":"Requires integrated systems reasoning and careful uncertainty management."}
+{"prompt":"High-value customer pays late from seasonal cash cycle; segment terms and escalation triggers.","complexity":1,"level":4,"reasoning":"Requires integrated systems reasoning and careful uncertainty management."}
+{"prompt":"Acquisition target revenue mixes prepayments, overages, staggered discounts; diligence durable revenue quality.","complexity":1,"level":4,"reasoning":"Requires integrated systems reasoning and careful uncertainty management."}
+{"prompt":"Replace individual operations targets with team goals; assess collaboration, free riding, accountability, quality, test.","complexity":1,"level":4,"reasoning":"Requires integrated systems reasoning and careful uncertainty management."}
+{"prompt":"Engagement declines and complaints rise by manager; analyze without assuming causation.","complexity":1,"level":4,"reasoning":"Requires integrated systems reasoning and careful uncertainty management."}
+{"prompt":"Allocate scarce capital among mandatory compliance, capacity expansion, retention with uncertain returns.","complexity":1,"level":4,"reasoning":"Requires integrated systems reasoning and careful uncertainty management."}
+{"prompt":"Refund discretion raised refunds, reduced repeat contacts, shifted satisfaction by segment; assess expansion.","complexity":1,"level":4,"reasoning":"Requires integrated systems reasoning and careful uncertainty management."}
+{"prompt":"Late close due to sales, billing, finance mismatch; redesign ownership, reconciliation, controls.","complexity":1,"level":4,"reasoning":"Requires integrated systems reasoning and careful uncertainty management."}
+{"prompt":"Closing low-revenue accounts may lose referrals or future value; segment and test.","complexity":1,"level":4,"reasoning":"Requires integrated systems reasoning and careful uncertainty management."}
+{"prompt":"Global service promise across legal, language, time zones; govern local variants and fairness.","complexity":1,"level":4,"reasoning":"Requires integrated systems reasoning and careful uncertainty management."}
+{"prompt":"Choose rapid cuts risking capacity versus slower uncertain savings; build board scenario method.","complexity":1,"level":4,"reasoning":"Requires integrated systems reasoning and careful uncertainty management."}
+{"prompt":"High enrollment, low redemption, unclear loyalty profit; analyze retain/redesign/retire and liability.","complexity":1,"level":4,"reasoning":"Requires integrated systems reasoning and careful uncertainty management."}
+{"prompt":"Design team performance pay for varying case difficulty without cherry-picking or premature closure.","complexity":1,"level":4,"reasoning":"Requires integrated systems reasoning and careful uncertainty management."}

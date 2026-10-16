@@ -3,36 +3,33 @@
 import argparse
 import asyncio
 import json
+from contextlib import closing
 from pathlib import Path
 from typing import Any
 
 import tinker
 
+# Support both package mode (-m src.baseline) and direct script execution.
 if __package__:
+    from .json_utils import iter_jsonl, reject_duplicate_keys
     from .scorer_config import COMPLEXITY_VALUES, SYSTEM_PROMPT
+    from .scorer_config import MODEL_NAME as BASE_MODEL
+    from .scorer_schema import build_messages, is_valid_complexity
 else:
+    from json_utils import iter_jsonl, reject_duplicate_keys
     from scorer_config import COMPLEXITY_VALUES, SYSTEM_PROMPT
+    from scorer_config import MODEL_NAME as BASE_MODEL
+    from scorer_schema import build_messages, is_valid_complexity
 
 
-BASE_MODEL = "Qwen/Qwen3-8B"
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 OUTPUT_PATH = PROJECT_ROOT / "results" / "baseline_qwen3_8b.jsonl"
 SUMMARY_PATH = PROJECT_ROOT / "results" / "baseline_qwen3_8b_summary.json"
-FINETUNED_OUTPUT_PATH = PROJECT_ROOT / "results" / "finetuned_500_qwen3_8b.jsonl"
-FINETUNED_SUMMARY_PATH = PROJECT_ROOT / "results" / "finetuned_500_qwen3_8b_summary.json"
+FINETUNED_OUTPUT_PATH = PROJECT_ROOT / "results" / "finetuned_2500_epoch1_qwen3_8b.jsonl"
+FINETUNED_SUMMARY_PATH = PROJECT_ROOT / "results" / "finetuned_2500_epoch1_qwen3_8b_summary.json"
 THINKING_ENABLED = False
 TEMPERATURE = 0
 MAX_OUTPUT_TOKENS = 50
-
-
-def reject_duplicate_keys(pairs: list[tuple[str, object]]) -> dict[str, object]:
-    """JSON normally keeps the last duplicate key; reject duplicates instead."""
-    result: dict[str, object] = {}
-    for key, value in pairs:
-        if key in result:
-            raise ValueError(f"Duplicate JSON property: {key}")
-        result[key] = value
-    return result
 
 
 def parse_prediction(raw_response: str) -> float | None:
@@ -46,8 +43,7 @@ def parse_prediction(raw_response: str) -> float | None:
         return None
 
     value = response["complexity"]
-    # bool is a subclass of int in Python, so check the exact numeric types.
-    if type(value) not in (int, float) or value not in COMPLEXITY_VALUES:
+    if not is_valid_complexity(value):
         return None
     return float(value)
 
@@ -55,21 +51,13 @@ def parse_prediction(raw_response: str) -> float | None:
 def load_examples(input_path: Path, limit: int | None) -> list[tuple[str, float]]:
     """Validate selected records before making any paid sampling requests."""
     examples: list[tuple[str, float]] = []
-    with input_path.open(encoding="utf-8") as input_file:
-        for line_number, line in enumerate(input_file, start=1):
-            if not line.strip():
-                continue
-            try:
-                record = json.loads(line, object_pairs_hook=reject_duplicate_keys)
-            except ValueError as error:
-                raise ValueError(
-                    f"{input_path}:{line_number}: invalid JSON: {error}"
-                ) from error
-
+    # closing() closes the reader (and its file) even if --limit causes a break.
+    with closing(iter_jsonl(input_path)) as records:
+        for line_number, record in records:
             if not isinstance(record, dict) or not isinstance(record.get("prompt"), str):
                 raise ValueError(f"{input_path}:{line_number}: prompt must be a string")
             expected = record.get("complexity")
-            if type(expected) not in (int, float) or expected not in COMPLEXITY_VALUES:
+            if not is_valid_complexity(expected):
                 raise ValueError(
                     f"{input_path}:{line_number}: complexity must be one of "
                     f"{COMPLEXITY_VALUES}"
@@ -181,7 +169,7 @@ async def evaluate(
     summary_path = FINETUNED_SUMMARY_PATH if checkpoint is not None else SUMMARY_PATH
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
-    # Match the async sampling pattern in test_tinker.py.
+    # Reuse one service and sampling client for every example in this run.
     service = tinker.ServiceClient()
     if checkpoint is not None:
         # model_path loads the trained adapter; base_model alone loads untouched weights.
@@ -198,10 +186,7 @@ async def evaluate(
     with output_path.open("w", encoding="utf-8") as output_file:
         for index, (user_prompt, expected) in enumerate(examples, start=1):
             tokens = tokenizer.apply_chat_template(
-                [
-                    {"role": "system", "content": SYSTEM_PROMPT},
-                    {"role": "user", "content": user_prompt},
-                ],
+                build_messages(user_prompt),
                 add_generation_prompt=True,
                 enable_thinking=THINKING_ENABLED,
                 return_dict=False,

@@ -1,0 +1,3361 @@
+root:680 [INFO] Command line invocation: src/train_smoke.py
+tinker_cookbook.utils.ml_log:618 [INFO] Logging to: runs\qwen3_8b_train_500_epoch1
+tinker.lib.public_interfaces.service_client:151 [INFO] ServiceClient initialized for session f9fbdefa-2632-5eb3-9fb2-03d77cabfe14
+tinker.lib.public_interfaces.service_client:293 [INFO] TrainingClient initialized for model f9fbdefa-2632-5eb3-9fb2-03d77cabfe14:train:0
+huggingface_hub.utils._http:993 [WARNING] Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+tinker_cookbook.supervised.train:390 [INFO] Training for 62 batches x 1 epochs = 62 steps
+tinker_cookbook.supervised.train:543 [INFO] Starting epoch 0
+tinker_cookbook.supervised.common:339 [INFO] Weight reduction: 'mean' (token-mean loss)
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+A central bank's policy announcements move both expectations and asset prices before the formal policy change. Propose an empirical identification strategy separating information revelation from policy shocks, including instruments, exclusion threats, and sensitivity to anticipation.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":1.00}<|im_end|>
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Reconcile this pantry count: start with 40 tins, receive 18, issue 25, discard 3, physically count 28. Calculate expected stock and discrepancy, and write a neutral note that does not accuse anyone.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.50}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 0               
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000100 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2310     |
+| progress             | 0.016129 |
+| time/finish_batch    | 2.652974 |
+| time/get_batch       | 0.068594 |
+| time/step            | 2.645602 |
+| time/submit_batch    | 0.108033 |
+| train_mean_bpb       | 1.915972 |
+| train_mean_nll       | 3.604709 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Produce a risk register for a volunteer picnic covering rain, food waste, and a missing keyholder. For each, specify a trigger, mitigation, owner role, and fallback rather than numerical probabilities.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.50}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 1               
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000098 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2467     |
+| progress             | 0.032258 |
+| time/finish_batch    | 1.904920 |
+| time/get_batch       | 0.032277 |
+| time/step            | 1.902641 |
+| time/submit_batch    | 0.033213 |
+| train_mean_bpb       | 1.454132 |
+| train_mean_nll       | 2.735803 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Derive an uncertainty-aware stopping rule for sequential A/B testing when allocation adapts to outcomes, users recur, and outcomes arrive late. Specify the filtration and explain which independence assumptions a standard fixed-sample test violates.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":1.00}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 2               
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000097 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2441     |
+| progress             | 0.048387 |
+| time/finish_batch    | 1.441370 |
+| time/get_batch       | 0.047676 |
+| time/step            | 1.434229 |
+| time/submit_batch    | 0.048815 |
+| train_mean_bpb       | 0.502892 |
+| train_mean_nll       | 0.946141 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+A recurring class has a waitlist, prepaid seats, and participants who may swap dates. Design rules for releasing cancelled seats and handling simultaneous swap requests without unfairly bypassing the waitlist or promising two people the same place.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.75}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 3               
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000095 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2390     |
+| progress             | 0.064516 |
+| time/finish_batch    | 1.529562 |
+| time/get_batch       | 0.030615 |
+| time/step            | 1.518943 |
+| time/submit_batch    | 0.031693 |
+| train_mean_bpb       | 0.459004 |
+| train_mean_nll       | 0.863570 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Outline a balanced 400-word opinion piece about pedestrianizing a shopping street. Include access for disabled visitors, delivery needs, quieter public space, and one measurable trial outcome.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.50}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 4               
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000094 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2375     |
+| progress             | 0.080645 |
+| time/finish_batch    | 1.480063 |
+| time/get_batch       | 0.038722 |
+| time/step            | 1.473181 |
+| time/submit_batch    | 0.039690 |
+| train_mean_bpb       | 0.258981 |
+| train_mean_nll       | 0.487246 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Encode the literal space in 'quiet room' as %20.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.00}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 5               
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000092 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2369     |
+| progress             | 0.096774 |
+| time/finish_batch    | 1.549147 |
+| time/get_batch       | 0.039013 |
+| time/step            | 1.546708 |
+| time/submit_batch    | 0.043514 |
+| train_mean_bpb       | 0.192993 |
+| train_mean_nll       | 0.363097 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+A stratified archaeological site contains reused timber, mixed deposits, and radiocarbon dates with a calibration plateau. Formulate competing chronological models, explain which dating evidence can constrain construction versus deposition, and design a sensitivity analysis that avoids counting related samples as independent corroboration.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":1.00}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 6               
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000090 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2397     |
+| progress             | 0.112903 |
+| time/finish_batch    | 1.471734 |
+| time/get_batch       | 0.073904 |
+| time/step            | 1.466957 |
+| time/submit_batch    | 0.081279 |
+| train_mean_bpb       | 0.052434 |
+| train_mean_nll       | 0.098650 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Our monitoring alert fires on a fixed failure percentage, but overnight volume is tiny and retries inflate the denominator by day. Propose alert logic that handles both conditions and explain the tradeoff between detecting small outages and avoiding noise.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.75}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 7               
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000089 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2386     |
+| progress             | 0.129032 |
+| time/finish_batch    | 1.623021 |
+| time/get_batch       | 0.034257 |
+| time/step            | 1.617363 |
+| time/submit_batch    | 0.035212 |
+| train_mean_bpb       | 0.024140 |
+| train_mean_nll       | 0.045418 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Write SQL for products(id,stock,reorder_level,discontinued) listing non-discontinued products below reorder level, excluding null stock as unknown rather than treating it as zero.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.50}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 8               
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000087 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2650     |
+| progress             | 0.145161 |
+| time/finish_batch    | 1.801473 |
+| time/get_batch       | 0.041404 |
+| time/step            | 1.798036 |
+| time/submit_batch    | 0.042336 |
+| train_mean_bpb       | 0.028426 |
+| train_mean_nll       | 0.053481 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Plan a theatre opening when the lead actor may recover by Friday, the understudy needs two rehearsals, the only stage is available Wednesday and Thursday, and cancelled performances incur refunds. Define decision points and a contingency that does not promise unavailable rehearsal time.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.75}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 9               
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000085 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2313     |
+| progress             | 0.161290 |
+| time/finish_batch    | 1.283452 |
+| time/get_batch       | 0.031930 |
+| time/step            | 1.275166 |
+| time/submit_batch    | 0.035437 |
+| train_mean_bpb       | 0.027623 |
+| train_mean_nll       | 0.051969 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Suggest an alternative to the word 'nice' in 'The guide gave a nice explanation', meaning easy to understand.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.25}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 10              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000084 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2391     |
+| progress             | 0.177419 |
+| time/finish_batch    | 1.542513 |
+| time/get_batch       | 0.038661 |
+| time/step            | 1.539266 |
+| time/submit_batch    | 0.039741 |
+| train_mean_bpb       | 0.040404 |
+| train_mean_nll       | 0.076017 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Analyze whether a pension rule can simultaneously be budget-balanced, insensitive to strategic retirement timing, and neutral across cohorts when longevity and wages evolve unpredictably. State a simplified model, derive feasibility conditions, and separate mathematical incompatibility from distributional choice.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":1.00}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 11              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000082 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2447     |
+| progress             | 0.193548 |
+| time/finish_batch    | 1.494949 |
+| time/get_batch       | 0.035399 |
+| time/step            | 1.492345 |
+| time/submit_batch    | 0.038796 |
+| train_mean_bpb       | 0.040066 |
+| train_mean_nll       | 0.075380 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Write ordered projector-return instructions: switch off, cool 15 minutes, unplug, pack cable separately, return before 17:00. Explain cooling without adding unsupported safety claims.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.50}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 12              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000081 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2385     |
+| progress             | 0.209677 |
+| time/finish_batch    | 1.542155 |
+| time/get_batch       | 0.035459 |
+| time/step            | 1.539168 |
+| time/submit_batch    | 0.036417 |
+| train_mean_bpb       | 0.020828 |
+| train_mean_nll       | 0.039185 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Turn this into a question for a customer survey: 'We want to know how easy the installation was.'<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.25}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 13              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000079 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2334     |
+| progress             | 0.225806 |
+| time/finish_batch    | 1.458579 |
+| time/get_batch       | 0.031673 |
+| time/step            | 1.451514 |
+| time/submit_batch    | 0.032556 |
+| train_mean_bpb       | 0.051753 |
+| train_mean_nll       | 0.097368 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Derive the efficient influence function for the average treatment effect under unconfoundedness, then explain cross-fitting and the product-rate condition for nuisance estimators. Separate identification assumptions from asymptotic estimation conditions.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":1.00}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 14              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000077 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2389     |
+| progress             | 0.241935 |
+| time/finish_batch    | 1.801590 |
+| time/get_batch       | 0.033541 |
+| time/step            | 1.796439 |
+| time/submit_batch    | 0.034467 |
+| train_mean_bpb       | 0.017582 |
+| train_mean_nll       | 0.033079 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+A climate reconstruction combines tree rings, lake sediments, and instruments with nonstationary response and uncertain dating. Formulate a hierarchical model and falsification checks, explaining identifiability limits between climate variation, proxy response drift, and temporal misalignment.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":1.00}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 15              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000076 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2435     |
+| progress             | 0.258065 |
+| time/finish_batch    | 1.453926 |
+| time/get_batch       | 0.041387 |
+| time/step            | 1.448039 |
+| time/submit_batch    | 0.042470 |
+| train_mean_bpb       | 0.029998 |
+| train_mean_nll       | 0.056439 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Put a space after each comma in 'red,amber,green'.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.00}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 16              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000074 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2399     |
+| progress             | 0.274194 |
+| time/finish_batch    | 1.624293 |
+| time/get_batch       | 0.034456 |
+| time/step            | 1.619805 |
+| time/submit_batch    | 0.038784 |
+| train_mean_bpb       | 0.025292 |
+| train_mean_nll       | 0.047585 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Given tasks A=2 days, B=3 days after A, C=4 days after A, and D=1 day after both B and C, calculate earliest completion with unlimited workers and identify the critical path.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.50}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 17              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000073 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2330     |
+| progress             | 0.290323 |
+| time/finish_batch    | 1.324839 |
+| time/get_batch       | 0.051516 |
+| time/step            | 1.322709 |
+| time/submit_batch    | 0.055677 |
+| train_mean_bpb       | 0.041678 |
+| train_mean_nll       | 0.078414 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Which is cheaper per kilogram: 750 g for $3 or 1 kg for $4.50? Show the unit prices.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.25}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 18              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000071 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2454     |
+| progress             | 0.306452 |
+| time/finish_batch    | 1.666044 |
+| time/get_batch       | 0.035564 |
+| time/step            | 1.661143 |
+| time/submit_batch    | 0.036652 |
+| train_mean_bpb       | 0.012425 |
+| train_mean_nll       | 0.023376 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Design a compiler optimization moving memory reads across function calls when alias information is incomplete, exceptions are observable, and data races have language-specific semantics. State proof obligations and provide counterexamples motivating each restriction.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":1.00}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 19              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000069 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2475     |
+| progress             | 0.322581 |
+| time/finish_batch    | 1.321839 |
+| time/get_batch       | 0.028408 |
+| time/step            | 1.318413 |
+| time/submit_batch    | 0.033116 |
+| train_mean_bpb       | 0.032159 |
+| train_mean_nll       | 0.060504 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Delete the duplicate adjacent word in 'Please please enter quietly', preserving the first occurrence.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.00}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 20              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000068 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2423     |
+| progress             | 0.338710 |
+| time/finish_batch    | 1.676727 |
+| time/get_batch       | 0.044320 |
+| time/step            | 1.673984 |
+| time/submit_batch    | 0.045494 |
+| train_mean_bpb       | 0.018907 |
+| train_mean_nll       | 0.035572 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+A coastal city must choose flood defenses affecting neighboring districts, insurance prices, relocation, and wetland migration. Build a robust multidecade decision model with endogenous settlement, identify distributional consequences, and propose adaptive commitments that remain credible when future administrations can reverse policy.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":1.00}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 21              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000066 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2422     |
+| progress             | 0.354839 |
+| time/finish_batch    | 1.586948 |
+| time/get_batch       | 0.036020 |
+| time/step            | 1.584559 |
+| time/submit_batch    | 0.036942 |
+| train_mean_bpb       | 0.023805 |
+| train_mean_nll       | 0.044788 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Explain how evaporation and condensation both appear in a closed terrarium, then predict qualitatively what happens when its lid is cooled while the base stays warm.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.50}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 22              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000065 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2399     |
+| progress             | 0.370968 |
+| time/finish_batch    | 1.706744 |
+| time/get_batch       | 0.044983 |
+| time/step            | 1.703666 |
+| time/submit_batch    | 0.050444 |
+| train_mean_bpb       | 0.017787 |
+| train_mean_nll       | 0.033465 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Explain why conditioning on a common effect can induce association.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.75}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 23              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000063 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2436     |
+| progress             | 0.387097 |
+| time/finish_batch    | 1.496205 |
+| time/get_batch       | 0.031445 |
+| time/step            | 1.487902 |
+| time/submit_batch    | 0.032330 |
+| train_mean_bpb       | 0.032724 |
+| train_mean_nll       | 0.061567 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Write a short birthday wish for a friend who enjoys hiking.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.25}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 24              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000061 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2343     |
+| progress             | 0.403226 |
+| time/finish_batch    | 1.488515 |
+| time/get_batch       | 0.029662 |
+| time/step            | 1.478479 |
+| time/submit_batch    | 0.030621 |
+| train_mean_bpb       | 0.021679 |
+| train_mean_nll       | 0.040788 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+A regional transport reform changes fares, housing demand, job location, and congestion. Formulate an evaluation distinguishing direct traveler benefits from equilibrium redistribution and displacement, then explain what short-run randomized discounts can and cannot identify about long-run policy.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":1.00}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 25              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000060 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2376     |
+| progress             | 0.419355 |
+| time/finish_batch    | 1.536266 |
+| time/get_batch       | 0.054897 |
+| time/step            | 1.530029 |
+| time/submit_batch    | 0.056633 |
+| train_mean_bpb       | 0.020274 |
+| train_mean_nll       | 0.038143 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Characterize when local consistency constraints on overlapping marginal probability tables admit a global joint distribution. Provide a cyclic counterexample and an algorithmic formulation for testing feasibility.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":1.00}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 26              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000058 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2384     |
+| progress             | 0.435484 |
+| time/finish_batch    | 1.452559 |
+| time/get_batch       | 0.046430 |
+| time/step            | 1.449796 |
+| time/submit_batch    | 0.047438 |
+| train_mean_bpb       | 0.011810 |
+| train_mean_nll       | 0.022220 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Derive optimal stopping for an unknown Bernoulli success rate with a Beta prior, finite horizon, per-trial cost, and a terminal reward for selecting the better of two actions.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":1.00}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 27              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000056 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2363     |
+| progress             | 0.451613 |
+| time/finish_batch    | 1.598814 |
+| time/get_batch       | 0.057298 |
+| time/step            | 1.595391 |
+| time/submit_batch    | 0.058594 |
+| train_mean_bpb       | 0.015356 |
+| train_mean_nll       | 0.028891 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Construct a concrete Simpson's paradox example and explain the reversal.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.75}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 28              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000055 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2411     |
+| progress             | 0.467742 |
+| time/finish_batch    | 1.422795 |
+| time/get_batch       | 0.039306 |
+| time/step            | 1.420627 |
+| time/submit_batch    | 0.046212 |
+| train_mean_bpb       | 0.018306 |
+| train_mean_nll       | 0.034441 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Draft a short proposal for a $300 neighborhood book exchange: shelves $180, weather protection $70, signs $25. Include remaining funds, a volunteer maintenance role, and a rule for unsuitable donations.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.50}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 29              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000053 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2326     |
+| progress             | 0.483871 |
+| time/finish_batch    | 1.946918 |
+| time/get_batch       | 0.024858 |
+| time/step            | 1.937055 |
+| time/submit_batch    | 0.025835 |
+| train_mean_bpb       | 0.016029 |
+| train_mean_nll       | 0.030158 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Can a deterministic finite-state predictor be calibrated against an adaptive binary sequence? Formalize calibration and prove the relevant limitation.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":1.00}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 30              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000052 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2424     |
+| progress             | 0.500000 |
+| time/finish_batch    | 1.668099 |
+| time/get_batch       | 0.030890 |
+| time/step            | 1.657766 |
+| time/submit_batch    | 0.032040 |
+| train_mean_bpb       | 0.015040 |
+| train_mean_nll       | 0.028298 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+In this XML, return the value of the id attribute on the outer exhibition element: <exhibition id="EX-204"><room name="Coast"><work id="W-01">Harbour</work><work id="W-02">Dunes</work></room><room name="Forest"><work id="W-03">Birches</work><work id="W-04">Moss</work></room><credits><curator id="P-09">Lena</curator></credits></exhibition>.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.00}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 31              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000050 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2336     |
+| progress             | 0.516129 |
+| time/finish_batch    | 1.352750 |
+| time/get_batch       | 0.044814 |
+| time/step            | 1.350112 |
+| time/submit_batch    | 0.049572 |
+| train_mean_bpb       | 0.013449 |
+| train_mean_nll       | 0.025303 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Explain what a browser bookmark does to someone who has never used one.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.25}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 32              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000048 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2444     |
+| progress             | 0.532258 |
+| time/finish_batch    | 1.491085 |
+| time/get_batch       | 0.045907 |
+| time/step            | 1.488638 |
+| time/submit_batch    | 0.050123 |
+| train_mean_bpb       | 0.017204 |
+| train_mean_nll       | 0.032369 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Change the bullet marker from '*' to '-' in '* spare cable'.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.00}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 33              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000047 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2607     |
+| progress             | 0.548387 |
+| time/finish_batch    | 2.048584 |
+| time/get_batch       | 0.094782 |
+| time/step            | 2.045726 |
+| time/submit_batch    | 0.095765 |
+| train_mean_bpb       | 0.034508 |
+| train_mean_nll       | 0.064923 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+A legal-drama scene involves two plausible readings of a fictional promise: 'I will repay you when the shop reopens.' Write an exchange exposing whether reopening is a condition or merely timing, without settling it through invented law.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.75}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 34              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000045 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2347     |
+| progress             | 0.564516 |
+| time/finish_batch    | 1.496452 |
+| time/get_batch       | 0.031797 |
+| time/step            | 1.487967 |
+| time/submit_batch    | 0.032857 |
+| train_mean_bpb       | 0.016894 |
+| train_mean_nll       | 0.031786 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Design a staged move from a shared mailbox to ticket software while replies can arrive in either system and attachments may be confidential. Specify ownership, duplicate detection, and how users find the authoritative conversation.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.75}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 35              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000044 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2385     |
+| progress             | 0.580645 |
+| time/finish_batch    | 1.460101 |
+| time/get_batch       | 0.037439 |
+| time/step            | 1.457946 |
+| time/submit_batch    | 0.038465 |
+| train_mean_bpb       | 0.013471 |
+| train_mean_nll       | 0.025345 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Write a warm two-sentence note thanking a neighbor for watering my plants while I was away.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.25}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 36              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000042 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2399     |
+| progress             | 0.596774 |
+| time/finish_batch    | 1.535743 |
+| time/get_batch       | 0.050374 |
+| time/step            | 1.530823 |
+| time/submit_batch    | 0.051386 |
+| train_mean_bpb       | 0.007987 |
+| train_mean_nll       | 0.015027 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Write 'book' three times with single spaces between copies.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.00}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 37              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000040 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2329     |
+| progress             | 0.612903 |
+| time/finish_batch    | 1.444453 |
+| time/get_batch       | 0.033471 |
+| time/step            | 1.439453 |
+| time/submit_batch    | 0.036927 |
+| train_mean_bpb       | 0.007414 |
+| train_mean_nll       | 0.013949 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Compare headphones A ($60, 12-hour battery, foldable) and B ($85, 24-hour battery, not foldable). Recommend one for a commuter prioritizing compactness and one for long flights.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.50}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 38              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000039 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2368     |
+| progress             | 0.629032 |
+| time/finish_batch    | 1.571959 |
+| time/get_batch       | 0.032968 |
+| time/step            | 1.563750 |
+| time/submit_batch    | 0.033974 |
+| train_mean_bpb       | 0.021783 |
+| train_mean_nll       | 0.040983 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Build a weekly watering table: ferns need water Monday and Thursday, cacti Friday, herbs Tuesday, Thursday, and Saturday. Group plants by day, omit empty days, and mark days with more than one group.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.50}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 39              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000037 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2341     |
+| progress             | 0.645161 |
+| time/finish_batch    | 1.428530 |
+| time/get_batch       | 0.047131 |
+| time/step            | 1.419883 |
+| time/submit_batch    | 0.048191 |
+| train_mean_bpb       | 0.025551 |
+| train_mean_nll       | 0.048072 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+A large exhibition pairs sacred objects with contemporary reinterpretations, but source communities disagree internally and some request restricted viewing. Develop a curatorial governance model handling contested authority, visitor access, documentation, and future changes in permission without freezing one faction's position as permanent tradition.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":1.00}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 40              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000035 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2405     |
+| progress             | 0.661290 |
+| time/finish_batch    | 1.537272 |
+| time/get_batch       | 0.050297 |
+| time/step            | 1.528586 |
+| time/submit_batch    | 0.051753 |
+| train_mean_bpb       | 0.009897 |
+| train_mean_nll       | 0.018621 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+A robot learns from human demonstrations but must obey hard collision constraints under partial observability and sensor latency. Propose a learning-control architecture and a conditional safety proof, identifying how state-estimation error can invalidate a nominal control barrier certificate.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":1.00}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 41              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000034 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2329     |
+| progress             | 0.677419 |
+| time/finish_batch    | 1.701394 |
+| time/get_batch       | 0.061442 |
+| time/step            | 1.693210 |
+| time/submit_batch    | 0.062415 |
+| train_mean_bpb       | 0.004791 |
+| train_mean_nll       | 0.009015 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+A national language policy expands teaching in a minority language while schools face scarce teachers, divergent dialect standards, and parents choosing dominant-language education for employment. Model the feedback among schooling, perceived opportunity, and intergenerational transmission, then propose an evaluation that does not equate enrollment with language vitality.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":1.00}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 42              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000032 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2421     |
+| progress             | 0.693548 |
+| time/finish_batch    | 1.555906 |
+| time/get_batch       | 0.045657 |
+| time/step            | 1.551112 |
+| time/submit_batch    | 0.049305 |
+| train_mean_bpb       | 0.005359 |
+| train_mean_nll       | 0.010084 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Debug an intermittent lost-update bug: two editors fetch the same document version, each submits only changed fields, and the server replaces the whole stored object after applying each patch to its earlier read. Propose concurrency control and explain conflicts versus safe independent edits.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.75}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 43              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000031 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2427     |
+| progress             | 0.709677 |
+| time/finish_batch    | 1.458756 |
+| time/get_batch       | 0.043877 |
+| time/step            | 1.454362 |
+| time/submit_batch    | 0.048951 |
+| train_mean_bpb       | 0.003178 |
+| train_mean_nll       | 0.005980 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Explain the difference between 'borrow' and 'lend' with one sentence using each.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.25}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 44              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000029 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2436     |
+| progress             | 0.725806 |
+| time/finish_batch    | 1.534970 |
+| time/get_batch       | 0.027127 |
+| time/step            | 1.526637 |
+| time/submit_batch    | 0.028212 |
+| train_mean_bpb       | 0.019162 |
+| train_mean_nll       | 0.036052 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+A batch import uses per-file transactions, but users expect an entire upload of several files to succeed together. Some files reference records created in others. Propose validation, commit, and failure semantics, including what a partial retry means.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.75}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 45              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000027 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2389     |
+| progress             | 0.741935 |
+| time/finish_batch    | 1.263165 |
+| time/get_batch       | 0.028968 |
+| time/step            | 1.260911 |
+| time/submit_batch    | 0.032344 |
+| train_mean_bpb       | 0.013055 |
+| train_mean_nll       | 0.024563 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Pick two activities for 25 students under $200: pottery costs $130 and fits 20, drawing $60 and fits 30, drama $90 and fits 30. Every activity must fit everyone. Verify capacity and cost.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.50}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 46              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000026 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2436     |
+| progress             | 0.758065 |
+| time/finish_batch    | 1.826198 |
+| time/get_batch       | 0.052873 |
+| time/step            | 1.817818 |
+| time/submit_batch    | 0.057458 |
+| train_mean_bpb       | 0.009421 |
+| train_mean_nll       | 0.017726 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Draft an email seeking a deadline extension from Monday to Wednesday because source data arrives late. Offer a Monday outline and avoid promising unchanged final figures.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.50}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 47              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000024 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2509     |
+| progress             | 0.774194 |
+| time/finish_batch    | 1.375706 |
+| time/get_batch       | 0.025329 |
+| time/step            | 1.373516 |
+| time/submit_batch    | 0.029479 |
+| train_mean_bpb       | 0.010691 |
+| train_mean_nll       | 0.020115 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+A parser must recover from malformed input to show several errors, but recovery may invent cascading errors after one missing delimiter. Propose synchronization rules and diagnostic wording that distinguish likely primary errors from uncertain downstream ones.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.75}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 48              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000023 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2448     |
+| progress             | 0.790323 |
+| time/finish_batch    | 1.832433 |
+| time/get_batch       | 0.054298 |
+| time/step            | 1.824098 |
+| time/submit_batch    | 0.055550 |
+| train_mean_bpb       | 0.004113 |
+| train_mean_nll       | 0.007738 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Express 3/4 as a decimal.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.00}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 49              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000021 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2348     |
+| progress             | 0.806452 |
+| time/finish_batch    | 1.448181 |
+| time/get_batch       | 0.026359 |
+| time/step            | 1.439980 |
+| time/submit_batch    | 0.029852 |
+| train_mean_bpb       | 0.004502 |
+| train_mean_nll       | 0.008471 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Explain the difference between boiling and melting with one everyday example of each.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.25}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 50              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000019 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2356     |
+| progress             | 0.822581 |
+| time/finish_batch    | 1.360526 |
+| time/get_batch       | 0.049336 |
+| time/step            | 1.358321 |
+| time/submit_batch    | 0.050449 |
+| train_mean_bpb       | 0.011748 |
+| train_mean_nll       | 0.022102 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+What does the equality expression 7 == 7 evaluate to in Python?<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.00}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 51              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000018 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2371     |
+| progress             | 0.838710 |
+| time/finish_batch    | 1.427069 |
+| time/get_batch       | 0.036175 |
+| time/step            | 1.421914 |
+| time/submit_batch    | 0.040283 |
+| train_mean_bpb       | 0.005785 |
+| train_mean_nll       | 0.010884 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+What is the output of Python's 'orchard'.startswith('or')? Briefly explain.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.25}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 52              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000016 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2346     |
+| progress             | 0.854839 |
+| time/finish_batch    | 1.645750 |
+| time/get_batch       | 0.043515 |
+| time/step            | 1.641021 |
+| time/submit_batch    | 0.044602 |
+| train_mean_bpb       | 0.006795 |
+| train_mean_nll       | 0.012785 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Rewrite this for a sign at a library: 'Don't talk loudly here because people are reading.'<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.25}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 53              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000015 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2428     |
+| progress             | 0.870968 |
+| time/finish_batch    | 1.657586 |
+| time/get_batch       | 0.043661 |
+| time/step            | 1.649301 |
+| time/submit_batch    | 0.044816 |
+| train_mean_bpb       | 0.008251 |
+| train_mean_nll       | 0.015523 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+We translate a fantasy novel where one character's gender is revealed late, but the target language often marks gender in adjectives. Propose strategies for narration and dialogue, explaining tradeoffs among naturalness, clue preservation, and accidental disclosure.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.75}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 54              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000013 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2404     |
+| progress             | 0.887097 |
+| time/finish_batch    | 1.682401 |
+| time/get_batch       | 0.041793 |
+| time/step            | 1.672962 |
+| time/submit_batch    | 0.042822 |
+| train_mean_bpb       | 0.007735 |
+| train_mean_nll       | 0.014554 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Draft a brief apology for arriving ten minutes late to a rehearsal.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.25}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 55              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000011 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2383     |
+| progress             | 0.903226 |
+| time/finish_batch    | 1.825448 |
+| time/get_batch       | 0.041838 |
+| time/step            | 1.816527 |
+| time/submit_batch    | 0.042882 |
+| train_mean_bpb       | 0.008720 |
+| train_mean_nll       | 0.016406 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+A sculptor wants a thin outdoor form to look weightless while using only stone. Identify structural and visual compromises, propose a concept, and explain which material details require an engineer's assessment rather than a visual guess.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.75}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 56              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000010 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2404     |
+| progress             | 0.919355 |
+| time/finish_batch    | 1.498713 |
+| time/get_batch       | 0.047610 |
+| time/step            | 1.491515 |
+| time/submit_batch    | 0.051739 |
+| train_mean_bpb       | 0.005212 |
+| train_mean_nll       | 0.009807 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Suggest three names for a neighborhood seed-swap event.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.25}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 57              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000008 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2389     |
+| progress             | 0.935484 |
+| time/finish_batch    | 1.261635 |
+| time/get_batch       | 0.075822 |
+| time/step            | 1.259368 |
+| time/submit_batch    | 0.079309 |
+| train_mean_bpb       | 0.003671 |
+| train_mean_nll       | 0.006907 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Write a simple reminder email using this information: the community choir meets on Tuesday at 19:00 in the upstairs hall; singers should bring their folders; newcomers are welcome; the entrance is through the courtyard. You may ignore these background notes: last week's rehearsal ran late, the chairs were rearranged, the tea urn has been repaired, the photocopier is being serviced, and the old noticeboard has been moved. Keep the email friendly and under 90 words.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.25}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 58              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000006 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2382     |
+| progress             | 0.951613 |
+| time/finish_batch    | 1.480049 |
+| time/get_batch       | 0.049277 |
+| time/step            | 1.475580 |
+| time/submit_batch    | 0.050873 |
+| train_mean_bpb       | 0.007714 |
+| train_mean_nll       | 0.014514 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Use this exact response for the customer, without changing any words: 'Thank you for returning the borrowed easel. We have checked it back into the studio inventory, and your deposit will be returned using the original payment method. You do not need to take any further action. We hope to see you at another workshop soon.'<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.00}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 59              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000005 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2431     |
+| progress             | 0.967742 |
+| time/finish_batch    | 1.501789 |
+| time/get_batch       | 0.026524 |
+| time/step            | 1.492857 |
+| time/submit_batch    | 0.031975 |
+| train_mean_bpb       | 0.007353 |
+| train_mean_nll       | 0.013835 |
++---------------------------------+
+tinker_cookbook.supervised.train:419 [INFO] <|im_start|>system
+You are a prompt complexity classifier.
+
+Estimate how difficult the user's request is for a capable general-purpose LLM to answer correctly.
+
+Complexity measures reasoning, interpretation, domain understanding, constraint tracking, and context handling required to produce a correct response.
+
+Use these scores:
+
+- 0.00 — Trivial: almost no reasoning; extraction, formatting, deterministic transformations.
+- 0.25 — Easy: limited interpretation or a few straightforward steps.
+- 0.50 — Moderate: multiple steps, combining information, some domain knowledge, or several constraints.
+- 0.75 — Hard: substantial reasoning, non-obvious tradeoffs, domain expertise, ambiguity, or many interacting constraints.
+- 1.00 — Very hard: deep multi-step reasoning, expert-level analysis, significant uncertainty, or interactions between several complex systems.
+
+Important:
+
+- Do not use prompt length as the main indicator of complexity.
+- Technical terminology alone does not make a prompt difficult.
+- A long prompt can be trivial.
+- A short prompt can be very difficult.
+
+Return JSON only:
+{"complexity": 0.50}
+
+Do not include explanations, Markdown, or additional properties.
+<|im_end|>
+<|im_start|>user
+Copy exactly the text between the angle brackets: <leave parcel beside blue gate>.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+{"complexity":0.00}<|im_end|>
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 60              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000003 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2469     |
+| progress             | 0.983871 |
+| time/finish_batch    | 1.756623 |
+| time/get_batch       | 0.042088 |
+| time/step            | 1.753637 |
+| time/submit_batch    | 0.043195 |
+| train_mean_bpb       | 0.006042 |
+| train_mean_nll       | 0.011367 |
++---------------------------------+
+tinker_cookbook.utils.ml_log:206 [INFO] Wrote metrics to runs\qwen3_8b_train_500_epoch1/metrics.jsonl
+tinker_cookbook.utils.ml_log:279 [INFO] 
+              Step 61              
++---------------------------------+
+| Metric               | Value    |
+|----------------------+----------|
+| epoch                | 0        |
+| learning_rate        | 0.000002 |
+| num_loss_tokens      | 8.000000 |
+| num_sequences        | 8        |
+| num_tokens           | 2600     |
+| progress             | 1.000000 |
+| time/finish_batch    | 1.487999 |
+| time/get_batch       | 0.059253 |
+| time/step            | 1.485489 |
+| time/submit_batch    | 0.060408 |
+| train_mean_bpb       | 0.005349 |
+| train_mean_nll       | 0.010063 |
++---------------------------------+
+tinker_cookbook.checkpoint_utils:467 [INFO] Saved checkpoints: {'state_path': 'tinker://f9fbdefa-2632-5eb3-9fb2-03d77cabfe14:train:0/weights/final', 'sampler_path': 'tinker://f9fbdefa-2632-5eb3-9fb2-03d77cabfe14:train:0/sampler_weights/final'}
+tinker_cookbook.supervised.train:584 [INFO] Training completed successfully
+tinker_cookbook.checkpoint_utils:399 [INFO] Reading checkpoints from runs\qwen3_8b_train_500_epoch1\checkpoints.jsonl
+tinker_cookbook.checkpoint_utils:421 [INFO] Found 1 valid checkpoints with key 'sampler_path' in runs\qwen3_8b_train_500_epoch1
+tinker_cookbook.checkpoint_utils:424 [INFO] Using last checkpoint: CheckpointRecord(name='final', batch=0, epoch=1, final=None, state_path='tinker://f9fbdefa-2632-5eb3-9fb2-03d77cabfe14:train:0/weights/final', sampler_path='tinker://f9fbdefa-2632-5eb3-9fb2-03d77cabfe14:train:0/sampler_weights/final', extra={'elapsed_tokens': 149111})

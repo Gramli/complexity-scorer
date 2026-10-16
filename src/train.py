@@ -1,57 +1,46 @@
-"""Validate the 500-example dataset and run a Cookbook supervised fine-tune."""
+"""Validate the 2,500-example dataset and run a Cookbook supervised fine-tune."""
 
 import argparse
 import asyncio
 import json
 from collections import Counter
-from contextlib import chdir
+from contextlib import chdir, closing
 from importlib.metadata import PackageNotFoundError, version
 from pathlib import Path
 from typing import Any
 
+# Support both package mode (-m src.train_smoke) and direct script execution.
 if __package__:
-    from .scorer_config import COMPLEXITY_VALUES, SYSTEM_PROMPT
+    from .json_utils import iter_jsonl
+    from .scorer_config import COMPLEXITY_VALUES, MODEL_NAME
+    from .scorer_schema import build_messages, is_valid_complexity
 else:
-    from scorer_config import COMPLEXITY_VALUES, SYSTEM_PROMPT
+    from json_utils import iter_jsonl
+    from scorer_config import COMPLEXITY_VALUES, MODEL_NAME
+    from scorer_schema import build_messages, is_valid_complexity
 
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-TRAIN_PATH = PROJECT_ROOT / "data" / "train_500.jsonl"
+TRAIN_PATH = PROJECT_ROOT / "data" / "train_2500.jsonl"
 EVAL_PATH = PROJECT_ROOT / "data" / "eval.jsonl"
-CONVERSATION_PATH = PROJECT_ROOT / "data" / "train_500_tinker.jsonl"
-LOG_PATH = PROJECT_ROOT / "runs" / "qwen3_8b_train_500_epoch1"
-MODEL_NAME = "Qwen/Qwen3-8B"
+CONVERSATION_PATH = PROJECT_ROOT / "data" / "train_2500_tinker.jsonl"
+LOG_PATH = PROJECT_ROOT / "runs" / "qwen3_8b_train_2500_epoch1"
 RENDERER_NAME = "qwen3"
 NUM_EPOCHS = 1
-BATCH_SIZE = 8
+BATCH_SIZE = 16
 MAX_LENGTH = 4096
 LEARNING_RATE = 1e-4
 LORA_RANK = 32
-EXAMPLES_PER_CLASS = 100
+EXAMPLES_PER_CLASS = 500
 EXPECTED_EXAMPLES = EXAMPLES_PER_CLASS * len(COMPLEXITY_VALUES)
-
-
-def reject_duplicate_keys(pairs: list[tuple[str, Any]]) -> dict[str, Any]:
-    """Reject ambiguous JSON instead of silently keeping the last property."""
-    record: dict[str, Any] = {}
-    for key, value in pairs:
-        if key in record:
-            raise ValueError(f"Duplicate JSON property: {key}")
-        record[key] = value
-    return record
 
 
 def read_records(path: Path) -> list[dict[str, Any]]:
     """Read JSONL and require a nonempty prompt on every record."""
     records: list[dict[str, Any]] = []
-    with path.open(encoding="utf-8") as input_file:
-        for line_number, line in enumerate(input_file, start=1):
-            if not line.strip():
-                continue
-            try:
-                record = json.loads(line, object_pairs_hook=reject_duplicate_keys)
-            except ValueError as error:
-                raise ValueError(f"{path}:{line_number}: invalid JSON: {error}") from error
+    # Keep prompt validation here: held-out records do not need score labels.
+    with closing(iter_jsonl(path)) as json_records:
+        for line_number, record in json_records:
             if (
                 not isinstance(record, dict)
                 or not isinstance(record.get("prompt"), str)
@@ -90,8 +79,7 @@ def validate_training_data(
         seen_prompts.add(prompt_key)
 
         score = record.get("complexity")
-        # Python considers bool an int; True and False are not valid score labels.
-        if type(score) not in (int, float) or score not in COMPLEXITY_VALUES:
+        if not is_valid_complexity(score):
             raise ValueError(
                 f"Training example {index}: complexity must be one of {COMPLEXITY_VALUES}"
             )
@@ -114,13 +102,13 @@ def write_conversations(examples: list[tuple[str, float]], path: Path) -> None:
     """Only the prompt and JSON score are used; reasoning never enters training."""
     with path.open("w", encoding="utf-8", newline="\n") as output_file:
         for prompt, score in examples:
-            conversation = {
-                "messages": [
-                    {"role": "system", "content": SYSTEM_PROMPT},
-                    {"role": "user", "content": prompt},
-                    {"role": "assistant", "content": f'{{"complexity":{score:.2f}}}'},
-                ]
-            }
+            messages = build_messages(prompt)
+            # Training adds the expected answer; evaluation asks the model for it.
+            # Double braces escape literal JSON braces; .2f keeps two decimals.
+            messages.append(
+                {"role": "assistant", "content": f'{{"complexity":{score:.2f}}}'}
+            )
+            conversation = {"messages": messages}
             output_file.write(json.dumps(conversation, ensure_ascii=False) + "\n")
 
 
@@ -180,7 +168,7 @@ def run_training() -> None:
         )
         config = train.Config(
             model_name=MODEL_NAME,
-            recipe_name="complexity_scorer_500",
+            recipe_name="complexity_scorer_2500",
             renderer_name=RENDERER_NAME,
             dataset_builder=dataset_builder,
             learning_rate=LEARNING_RATE,
@@ -209,7 +197,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--prepare-only", action="store_true",
-        help="Validate and write data/train_500_tinker.jsonl without starting training",
+        help="Validate and write data/train_2500_tinker.jsonl without starting training",
     )
     args = parser.parse_args()
 

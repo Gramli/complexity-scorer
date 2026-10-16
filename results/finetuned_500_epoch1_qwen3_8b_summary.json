@@ -1,0 +1,63 @@
+{
+  "model": "Qwen/Qwen3-8B",
+  "dataset": "data/eval.jsonl",
+  "thinking_enabled": false,
+  "temperature": 0,
+  "max_output_tokens": 50,
+  "total_examples": 50,
+  "valid_response_format": 50,
+  "invalid_response_format": 0,
+  "correct_predictions": 37,
+  "incorrect_predictions": 13,
+  "exact_accuracy": 0.74,
+  "mean_absolute_error": 0.065,
+  "confusion_matrix": {
+    "labels": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "rows": "expected",
+    "columns": "predicted",
+    "matrix": [
+      [
+        4,
+        6,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        8,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        8,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        8,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        9
+      ]
+    ]
+  },
+  "checkpoint": "tinker://f9fbdefa-2632-5eb3-9fb2-03d77cabfe14:train:0/sampler_weights/final"
+}
